@@ -5,11 +5,14 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class RegularScene {
+public class RegularScene implements Serializable
+{
     
    private String name;
    private String description;

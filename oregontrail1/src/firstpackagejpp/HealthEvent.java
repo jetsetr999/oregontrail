@@ -5,11 +5,13 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class HealthEvent extends Event
+public class HealthEvent extends Event implements Serializable
 {
     private int decreaseHealth;
 
