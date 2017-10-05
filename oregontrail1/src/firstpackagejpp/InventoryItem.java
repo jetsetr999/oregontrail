@@ -5,11 +5,13 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class InventoryItem 
+public class InventoryItem implements Serializable
 {
     private String name;
     private int quantityInStock;

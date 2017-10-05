@@ -5,12 +5,13 @@
  */
 package firstpackagejpp;
 import java.awt.Point;
+import java.io.Serializable;
 
 /**
  *
  * @author Kyle Jones
  */
-public class Map 
+public class Map implements Serializable
 {
     private Point description;
     private int rowCount;

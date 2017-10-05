@@ -5,11 +5,13 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class WeatherEvent extends Event
+public class WeatherEvent extends Event implements Serializable
 {
     private int extraDelay;
 

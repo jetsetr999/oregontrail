@@ -5,12 +5,13 @@
  */
 package firstpackagejpp;
 import java.awt.Point;
+import java.io.Serializable;
 
 /**
  *
  * @author Kyle Jones
  */
-public enum Actor 
+public enum Actor implements Serializable
 {
     Father("Lehi", "He is the prophet and leader of the family.", new Point(1, 1)),
     Mother("Sariah", "She is Lehi's wife and mother of the family.", new Point(0, 1)),

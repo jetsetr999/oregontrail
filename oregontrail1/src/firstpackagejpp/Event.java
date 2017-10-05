@@ -5,11 +5,13 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class Event 
+public class Event implements Serializable
 {
     
     private String name;

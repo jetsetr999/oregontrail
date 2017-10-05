@@ -5,11 +5,13 @@
  */
 package firstpackagejpp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Kyle Jones
  */
-public class TheftEvent extends Event
+public class TheftEvent extends Event implements Serializable
 {
     private int decreaseAmount;
 
