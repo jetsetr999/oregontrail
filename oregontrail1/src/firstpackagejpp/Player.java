@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package firstpackagejpp;
-
+import java.io.Serializable;
+import java.util.ArrayList;
+        
+        
 /**
  *
  * @author parhe
@@ -13,7 +16,7 @@ public class Player implements Serializable {
 
     private String name;
     private double time;
-    private ArrayList<Game> games = new ArrayList<Game>();
+    private ArrayList<Game> games = new ArrayList<>();
     
     public Player() {
       
@@ -35,11 +38,11 @@ public class Player implements Serializable {
         this.time = time;
     }
 
-    public <any> getGames() {
+    public ArrayList<Game> getGames() {
         return games;
     }
 
-    public void setGames(<any> games) {
+    public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
 
