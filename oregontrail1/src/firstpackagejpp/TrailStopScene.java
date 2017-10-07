@@ -11,4 +11,14 @@ package firstpackagejpp;
  */
 public class TrailStopScene {
     
+   private int increaseAmount;
+
+    public int getIncreaseAmount() {
+        return increaseAmount;
+    }
+
+    public void setIncreaseAmount(int increaseAmount) {
+        this.increaseAmount = increaseAmount;
+    }
+   
 }
