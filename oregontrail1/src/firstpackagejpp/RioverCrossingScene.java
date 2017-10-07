@@ -47,6 +47,50 @@ public class RioverCrossingScene {
     private int width;
     private int crossingTime;
     private int dropSupplies;
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + this.depth;
+        hash = 53 * hash + this.width;
+        hash = 53 * hash + this.crossingTime;
+        hash = 53 * hash + this.dropSupplies;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final RioverCrossingScene other = (RioverCrossingScene) obj;
+        if (this.depth != other.depth) {
+            return false;
+        }
+        if (this.width != other.width) {
+            return false;
+        }
+        if (this.crossingTime != other.crossingTime) {
+            return false;
+        }
+        if (this.dropSupplies != other.dropSupplies) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "RioverCrossingScene{" + "depth=" + depth + ", width=" + width + ", crossingTime=" + crossingTime + ", dropSupplies=" + dropSupplies + '}';
+    }
+    
+    
     
     
 }
