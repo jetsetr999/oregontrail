@@ -9,7 +9,7 @@ package firstpackagejpp;
  *
  * @author Darrin
  */
-public class RioverCrossingScene {
+public class RiverCrossingScene {
     
     private int depth;
 
@@ -69,7 +69,7 @@ public class RioverCrossingScene {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final RioverCrossingScene other = (RioverCrossingScene) obj;
+        final RiverCrossingScene other = (RiverCrossingScene) obj;
         if (this.depth != other.depth) {
             return false;
         }
