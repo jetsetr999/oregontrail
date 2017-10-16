@@ -9,7 +9,8 @@ package firstpackagejpp;
  *
  * @author Darrin
  */
-public class TownScene {
+public class TownScene extends RegularScene
+{
     
     private int amount;
 

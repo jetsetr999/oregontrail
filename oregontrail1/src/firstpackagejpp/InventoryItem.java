@@ -15,10 +15,38 @@ import java.util.Objects;
 public class InventoryItem implements Serializable
 {
     private String name;
-    private int quantityInStock;
-    private int requiredAmount;
-    private int weightPerUnit;
+    private double quantityInStock;
+    private double requiredAmount;
+    private double weightPerUnit;
     private double pricePerUnit;
+    private double onHandItem;
+    private double itemQuantity;
+
+    public InventoryItem(String name, int quantityInStock, int requiredAmount, int weightPerUnit, double pricePerUnit, double onHandItem, double itemQuantity) {
+        this.name = name;
+        this.quantityInStock = quantityInStock;
+        this.requiredAmount = requiredAmount;
+        this.weightPerUnit = weightPerUnit;
+        this.pricePerUnit = pricePerUnit;
+        this.onHandItem = onHandItem;
+        this.itemQuantity = itemQuantity;
+    }
+
+    public double getOnHandItem() {
+        return onHandItem;
+    }
+
+    public void setOnHandItem(double onHandItem) {
+        this.onHandItem = onHandItem;
+    }
+
+    public double getItemQuantity() {
+        return itemQuantity;
+    }
+
+    public void setItemQuantity(double itemQuantity) {
+        this.itemQuantity = itemQuantity;
+    }
 
     public String getName() {
         return name;
