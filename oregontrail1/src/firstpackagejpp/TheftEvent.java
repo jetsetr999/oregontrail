@@ -15,6 +15,10 @@ public class TheftEvent extends Event implements Serializable
 {
     private int decreaseAmount;
 
+    public TheftEvent() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getDecreaseAmount() {
         return decreaseAmount;
     }
@@ -51,6 +55,12 @@ public class TheftEvent extends Event implements Serializable
     @Override
     public String toString() {
         return "TheftEvent{" + "decreaseAmount=" + decreaseAmount + '}';
+    
+    
+    }
+
+    public TheftEvent(String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        super(name, type, delay, effect, counter, chanceOfOccurring);
     }
     
     

@@ -15,6 +15,10 @@ public class WeatherEvent extends Event implements Serializable
 {
     private int extraDelay;
 
+    public WeatherEvent() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getExtraDelay() {
         return extraDelay;
     }
@@ -51,6 +55,10 @@ public class WeatherEvent extends Event implements Serializable
     @Override
     public String toString() {
         return "WeatherEvent{" + "extraDelay=" + extraDelay + '}';
+    }
+
+    public WeatherEvent(String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        super(name, type, delay, effect, counter, chanceOfOccurring);
     }
   
     

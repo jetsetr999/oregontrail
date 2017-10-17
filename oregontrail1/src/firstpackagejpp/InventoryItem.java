@@ -32,6 +32,10 @@ public class InventoryItem implements Serializable
         this.itemQuantity = itemQuantity;
     }
 
+    public InventoryItem() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public double getOnHandItem() {
         return onHandItem;
     }
@@ -56,7 +60,7 @@ public class InventoryItem implements Serializable
         this.name = name;
     }
 
-    public int getQuantityInStock() {
+    public double getQuantityInStock() {
         return quantityInStock;
     }
 
@@ -64,7 +68,7 @@ public class InventoryItem implements Serializable
         this.quantityInStock = quantityInStock;
     }
 
-    public int getRequiredAmount() {
+    public double getRequiredAmount() {
         return requiredAmount;
     }
 
@@ -72,7 +76,7 @@ public class InventoryItem implements Serializable
         this.requiredAmount = requiredAmount;
     }
 
-    public int getWeightPerUnit() {
+    public double getWeightPerUnit() {
         return weightPerUnit;
     }
 
@@ -92,9 +96,9 @@ public class InventoryItem implements Serializable
     public int hashCode() {
         int hash = 7;
         hash = 23 * hash + Objects.hashCode(this.name);
-        hash = 23 * hash + this.quantityInStock;
-        hash = 23 * hash + this.requiredAmount;
-        hash = 23 * hash + this.weightPerUnit;
+        hash = (int) (23 * hash + this.quantityInStock);
+        hash = (int) (23 * hash + this.requiredAmount);
+        hash = (int) (23 * hash + this.weightPerUnit);
         hash = 23 * hash + (int) (Double.doubleToLongBits(this.pricePerUnit) ^ (Double.doubleToLongBits(this.pricePerUnit) >>> 32));
         return hash;
     }
@@ -132,6 +136,16 @@ public class InventoryItem implements Serializable
     @Override
     public String toString() {
         return "InventoryItem{" + "name=" + name + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + ", weightPerUnit=" + weightPerUnit + ", pricePerUnit=" + pricePerUnit + '}';
+    }
+
+    public InventoryItem(String name, double quantityInStock, double requiredAmount, double weightPerUnit, double pricePerUnit, double onHandItem, double itemQuantity) {
+        this.name = name;
+        this.quantityInStock = quantityInStock;
+        this.requiredAmount = requiredAmount;
+        this.weightPerUnit = weightPerUnit;
+        this.pricePerUnit = pricePerUnit;
+        this.onHandItem = onHandItem;
+        this.itemQuantity = itemQuantity;
     }
     
     

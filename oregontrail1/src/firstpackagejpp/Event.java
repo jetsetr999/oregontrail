@@ -21,6 +21,19 @@ public class Event implements Serializable
     private String effect;
     private String counter;
     private double chanceOfOccurring;
+
+    public Event(String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        this.name = name;
+        this.type = type;
+        this.delay = delay;
+        this.effect = effect;
+        this.counter = counter;
+        this.chanceOfOccurring = chanceOfOccurring;
+    }
+
+    public Event() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public String getName() {
         return name;

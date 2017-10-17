@@ -67,7 +67,7 @@ public class OregonTrail1 {
         
         
         String wheelName = wheel.getName();
-        int wheelQuantity = wheel.getQuantityInStock();
+        double wheelQuantity = wheel.getQuantityInStock();
         double wheelPrice = wheel.getPricePerUnit();
         
         System.out.println("We have " + wheelQuantity + " "+ wheelName 
