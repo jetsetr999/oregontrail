@@ -40,17 +40,22 @@ public class FortScene {
             return false;
         }
         final FortScene other = (FortScene) obj;
-        if (this.amount != other.amount) {
-            return false;
-        }
-        return true;
+        return this.amount == other.amount;
     }
 
     @Override
     public String toString() {
         return "FortScene{" + "amount=" + amount + '}';
     }
-    
+
+    /*public void setName(String crystal_Skull) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    */
     
        
     
