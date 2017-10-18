@@ -48,4 +48,74 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         
     }
+    
+    
+        /**
+     * Test 3
+     */
+    @Test
+    public void test3GetSubTotal() {
+        System.out.println("getSubTotal");
+        System.out.println("Test Case 3");
+        double pricePerUnit = 3;
+        double itemQuantity = -4;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1;
+        double result = instance.getSubTotal(pricePerUnit, itemQuantity);
+        assertEquals(expResult, result, 0.0);
+        
+    }
+    
+    
+        /**
+     * Test 4
+     */
+    @Test
+    public void test4GetSubTotal() {
+        System.out.println("getSubTotal");
+        System.out.println("Test Case 4");
+        double pricePerUnit = 3;
+        double itemQuantity = 0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1;
+        double result = instance.getSubTotal(pricePerUnit, itemQuantity);
+        assertEquals(expResult, result, 0.0);
+        
+    }
+    
+    
+        /**
+     * Test 5
+     */
+    @Test
+    public void test5GetSubTotal() {
+        System.out.println("getSubTotal");
+        System.out.println("Test Case 5");
+        double pricePerUnit = 1;
+        double itemQuantity = 1;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 1;
+        double result = instance.getSubTotal(pricePerUnit, itemQuantity);
+        assertEquals(expResult, result, 0.0);
+        
+    }
+    
+    
+        /**
+     * Test 6
+     */
+    @Test
+    public void test6GetSubTotal() {
+        System.out.println("getSubTotal");
+        System.out.println("Test Case 6");
+        double pricePerUnit = 300;
+        double itemQuantity = 300;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 90000;
+        double result = instance.getSubTotal(pricePerUnit, itemQuantity);
+        assertEquals(expResult, result, 0.0);
+        
+    } 
 }   
+
+
