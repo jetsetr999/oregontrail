@@ -14,6 +14,10 @@ import firstpackagejpp.InventoryItem;
 import firstpackagejpp.RegularScene;
 import firstpackagejpp.TheftEvent;
 import firstpackagejpp.WeatherEvent;
+import firstpackagejpp.FortScene;
+import firstpackagejpp.TownScene;
+import firstpackagejpp.RiverCrossingScene;
+import firstpackagejpp.TrailStopScene;
 /**
  *
  * @author parhe
@@ -22,6 +26,7 @@ public class OregonTrail1 {
 
     /**
      * @param args the command line arguments
+     * 
      */
     public static void main(String[] args) 
     {
@@ -62,7 +67,7 @@ public class OregonTrail1 {
         
         
         String wheelName = wheel.getName();
-        int wheelQuantity = wheel.getQuantityInStock();
+        double wheelQuantity = wheel.getQuantityInStock();
         double wheelPrice = wheel.getPricePerUnit();
         
         System.out.println("We have " + wheelQuantity + " "+ wheelName 
@@ -160,6 +165,52 @@ public class OregonTrail1 {
                           + "  Normally this would delay you " + rainingMenDelay
                           + ", but the absurdity of this will take " 
                           + rainingMenExtraDelay + " days to get over.");
+        
+        /*
+        FortScene
+        */
+        
+        FortScene crystalSkull = new FortScene();
+        
+        crystalSkull.setName("Crystal Skull");
+        crystalSkull.setAmount(3);
+        
+        String crystalSkullName = crystalSkull.getName();
+        int crystalSkullAmount = crystalSkull.getAmount();
+        
+        System.out.println(" This fort comes equipped with " 
+                            + crystalSkullName + ".  They are very powerful and"
+                            + " handy in a pinch.  " + crystalSkullAmount
+                            + " " + crystalSkullName + " have been added to"
+                            + " your supplies.");
+       
+        /* 
+        TownScene
+        */
+        TownScene golfClubs = new TownScene();
+        
+        golfClubs.setName("Callaway Clubs");
+        golfClubs.setAmount(14);
+        
+        String golfClubsName = golfClubs.getName();
+        int golfClubsAmount = golfClubs.getAmount();
+        
+        System.out.println(golfClubsName + " are essential to a persons"
+                            + " survival. This is non-negotiable " + golfClubsAmount
+                            + " " + golfClubsName + " have been added to"
+                            + " your supplies.");
+        
+        /*
+        RiverCrossingScene
+        */
+        
+        /*
+        TrailStopScene
+        */
+        
+        
+        
+        
     }
     
 }

@@ -11,13 +11,13 @@ import java.io.Serializable;
  *
  * @author parhe
  */
-public class Game implements Serializable {
+public class game implements Serializable {
     
     private double totalTime;
     private int noPeople;
     private Player player; 
 
-    public Game() {
+    public game() {
     }
 
     public double getTotalTime() {

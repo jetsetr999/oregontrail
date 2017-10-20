@@ -15,6 +15,10 @@ public class TheftEvent extends Event implements Serializable
 {
     private int decreaseAmount;
 
+    public TheftEvent() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getDecreaseAmount() {
         return decreaseAmount;
     }
@@ -22,6 +26,44 @@ public class TheftEvent extends Event implements Serializable
     public void setDecreaseAmount(int decreaseAmount) {
         this.decreaseAmount = decreaseAmount;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 47 * hash + this.decreaseAmount;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final TheftEvent other = (TheftEvent) obj;
+        if (this.decreaseAmount != other.decreaseAmount) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "TheftEvent{" + "decreaseAmount=" + decreaseAmount + '}';
+    
+    
+    }
+
+    public TheftEvent(String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        super(name, type, delay, effect, counter, chanceOfOccurring);
+    }
+    
+    
     
     
 }

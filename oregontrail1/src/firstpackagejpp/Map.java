@@ -6,6 +6,7 @@
 package firstpackagejpp;
 import java.awt.Point;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -40,6 +41,46 @@ public class Map implements Serializable
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 89 * hash + Objects.hashCode(this.description);
+        hash = 89 * hash + this.rowCount;
+        hash = 89 * hash + this.columnCount;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Map other = (Map) obj;
+        if (this.rowCount != other.rowCount) {
+            return false;
+        }
+        if (this.columnCount != other.columnCount) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Map{" + "description=" + description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+    }
+    
+    
     
     
     
