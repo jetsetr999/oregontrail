@@ -9,7 +9,8 @@ package firstpackagejpp;
  *
  * @author Darrin
  */
-public class TownScene {
+public class TownScene extends RegularScene
+{
     
     private int amount;
 
@@ -51,13 +52,13 @@ public class TownScene {
         return "TownScene{" + "amount=" + amount + '}';
     }
 
-    /*public void setName(String callaway_Clubs) {
-        throw new UnsupportedOpe rationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setName(String callaway_Clubs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
+    }
     
     
     

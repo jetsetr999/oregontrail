@@ -14,6 +14,10 @@ public class AttackEvent extends Event
     private int decreaseAmount;
     private int decreaseHealth;
 
+    public AttackEvent() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getDecreaseAmount() {
         return decreaseAmount;
     }
@@ -62,6 +66,15 @@ public class AttackEvent extends Event
     @Override
     public String toString() {
         return "AttackEvent{" + "decreaseAmount=" + decreaseAmount + ", decreaseHealth=" + decreaseHealth + '}';
+    
+    
+    
+    }
+
+    public AttackEvent(int decreaseAmount, int decreaseHealth, String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        super(name, type, delay, effect, counter, chanceOfOccurring);
+        this.decreaseAmount = decreaseAmount;
+        this.decreaseHealth = decreaseHealth;
     }
     
     

@@ -15,6 +15,10 @@ public class HealthEvent extends Event implements Serializable
 {
     private int decreaseHealth;
 
+    public HealthEvent() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getDecreaseHealth() {
         return decreaseHealth;
     }
@@ -51,6 +55,13 @@ public class HealthEvent extends Event implements Serializable
     @Override
     public String toString() {
         return "HealthEvent{" + "decreaseHealth=" + decreaseHealth + '}';
+    
+    
+    }
+
+    public HealthEvent(int decreaseHealth, String name, String type, int delay, String effect, String counter, double chanceOfOccurring) {
+        super(name, type, delay, effect, counter, chanceOfOccurring);
+        this.decreaseHealth = decreaseHealth;
     }
     
   
