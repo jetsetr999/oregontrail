@@ -7,24 +7,20 @@ package oregontrail.control;
 /**
  *
  * @author Kyle Jones
+ * This is being added JUST so I can push this version
  */
 public class InventoryControl
 {
-    public double getSubTotal(double weight, double amount
-                             , double pricePerUnit, double onHandItem 
-                             , double itemQuantity)
+    public double getSubTotal(double pricePerUnit , double itemQuantity)
                              
     {
         
-        if (amount < 0 || weight < 0 || weight > 300 || amount > 300)
+        if (pricePerUnit < 0 || itemQuantity <= 0 || itemQuantity > 300 || pricePerUnit > 300)
         {
             System.out.println("\nthe weight and amount must be greater than 0 "
             + "and the weight and amount must be less than or equal to 300.");
             return -1;
         }
-        double calcWeight = amount * itemQuantity;
-        double addToInventory = onHandItem + itemQuantity;
-        double removeFromInventory = onHandItem - itemQuantity;
         double subTotal = itemQuantity * pricePerUnit;
         return subTotal;
     }
