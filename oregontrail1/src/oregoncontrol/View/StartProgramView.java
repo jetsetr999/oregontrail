@@ -34,7 +34,7 @@ public class StartProgramView {
                     + "\n                                                      "
                     + "\n This is a text based game of strategy and chance.    "
                     + "\n In this game you will help the pioneers reach the    "
-                    + "\n ???? valley before the first snowfall.  You and your "
+                    + "\n Squaw valley before the first snowfall.  You and your"
                     + "\n family will need to strategize and decide how much   "
                     + "\n food and supplies are needed for the journey at hand."
                     + "\n Hunting supplies would be very helpful in assisting  "
