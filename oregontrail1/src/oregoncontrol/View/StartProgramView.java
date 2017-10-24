@@ -12,7 +12,7 @@ package oregoncontrol.View;
 public class StartProgramView {
 
     // Banner Darrin
-    private String promptMessage;
+    private final String promptMessage;
 
     public StartProgramView() {
 
@@ -26,7 +26,7 @@ public class StartProgramView {
         // welcome message - main menu Darrin
     }
 
-    private void displayBanner() {
+    private void displayBanner() 
         {
 
             System.out.println(
@@ -47,7 +47,18 @@ public class StartProgramView {
                     + "\n******************************************************"
             );
 
-        }
+      
     }
 
+    public void displayStartProgramView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    /*public void startMenu()
+    {
+        
+        
+        
+    }*/
+    
 }
