@@ -47,6 +47,11 @@ public class Player implements Serializable {
         this.games = games;
     }
 
+    public Player(String name, double time) {
+        this.name = name;
+        this.time = time;
+    }
+
 
     
         

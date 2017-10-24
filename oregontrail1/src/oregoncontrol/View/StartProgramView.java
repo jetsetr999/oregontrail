@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package oregoncontrol.View;
-
+import java.io.Console;
+import oregontrail.control.PlayerControl;
 /**
  *
  * @author Darrin
@@ -16,8 +17,12 @@ public class StartProgramView {
 
     public StartProgramView() {
 
-        this.promptMessage = "\nPlease enter your name: ";
 
+        this.promptMessage = "\nPlease enter your name: ";
+        Console console = System.console();
+        String playerName = console.readLine();
+        PlayerControl playControl = new PlayerControl();
+        playControl.newPlayer(playerName);
         // display banner
         this.displayBanner();
 

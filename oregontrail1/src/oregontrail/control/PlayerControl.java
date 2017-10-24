@@ -5,10 +5,22 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.Player;
+
 /**
  *
  * @author Kyle Jones
  */
-public class PlayerControl {
-    
+public class PlayerControl 
+{
+     public Player newPlayer(String name)
+     {
+         Player playerOne = new Player();
+         playerOne.setName(name);
+         return playerOne;
+     }
+     
+        public PlayerControl() {
+        }
 }
+
