@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Kyle Jones
+ * @author parhe
  */
 public class RiverCrossingControlTest {
     
@@ -18,66 +18,118 @@ public class RiverCrossingControlTest {
     }
 
     /**
-     * Test of canWeFloat method, of class RiverCrossingControl.
+     * Test 1 
      */
     @Test
-    public void testCanWeFloat1() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(101);
-        boolean expResult = true;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+    public void test1CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 1;
+        double currentSupplies = 1;
+        double depth = 1;
+        double multiplyer = 1;
+        double speed = 1;
+        double weight = 1;
+        double amount = 1;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = 0;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
     
+    
+        /**
+     * Test 2 
+     */
     @Test
-    public void testCanWeFloat2() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(102);
-        boolean expResult = false;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+    public void test2CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 10;
+        double currentSupplies = 5;
+        double depth = 2;
+        double multiplyer = 3;
+        double speed = 2;
+        double weight = 3;
+        double amount = 2;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = 0;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
     
+    
+        /**
+     * Test 3 
+     */
     @Test
-    public void testCanWeFloat3() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(103);
-        boolean expResult = true;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+    public void test3CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 10;
+        double currentSupplies = 10;
+        double depth = 10;
+        double multiplyer = 10;
+        double speed = 10;
+        double weight = 10;
+        double amount = 10;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = -1;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
     
+        /**
+     * Test 4 
+     */
     @Test
-    public void testCanWeFloat4() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(104);
-        boolean expResult = true;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+    public void test4CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 10;
+        double currentSupplies = 10;
+        double depth = 1;
+        double multiplyer = 1;
+        double speed = 10;
+        double weight = 10;
+        double amount = 1;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = -1;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
     
+        /**
+     * Test 5 
+     */
     @Test
-    public void testCanWeFloat5() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(105);
-        boolean expResult = true;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+    public void test5CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 1;
+        double currentSupplies = 1;
+        double depth = 1;
+        double multiplyer = 1;
+        double speed = 1;
+        double weight = 1;
+        double amount = 1;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = 0;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
     
-        @Test
-    public void testCanWeFloat6() {
-        System.out.println("canWeFloat");
-        RiverCrossingControl instance = new RiverCrossingControl(106);
-        boolean expResult = false;
-        boolean result = instance.canWeFloat();
-        assertEquals(expResult, result);
+        /**
+     * Test 6 
+     */
+    @Test
+    public void test6CalcSupplyDrop() {
+        System.out.println("calcSupplyDrop");
+        double amntSuppliesDropped = 1;
+        double currentSupplies = 1;
+        double depth = 1;
+        double multiplyer = 1;
+        double speed = 1;
+        double weight = 1;
+        double amount = 1;
+        RiverCrossingControl instance = new RiverCrossingControl();
+        double expResult = 0;
+        double result = instance.calcSupplyDrop(amntSuppliesDropped, currentSupplies, depth, multiplyer, speed, weight, amount);
+        assertEquals(expResult, result, 0.0);
     }
-    
-    
-    
-    
-    
-    
-    
 }

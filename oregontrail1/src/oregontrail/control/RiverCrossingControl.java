@@ -10,61 +10,33 @@ import java.util.Random;
  * random environmental variables.
  * @author Kyle Jones
  */
-public class RiverCrossingControl 
-{
-    Random myRandom;
+public class RiverCrossingControl {
 
-    public RiverCrossingControl(long seed) {
-        myRandom = new Random(seed);
-    }
-    private double getWidth()
-    {
-        double width = myRandom.nextDouble() * 980 + 20;
-        return width;
-    }
-    private double getDepth()
-    {
-        double depth = myRandom.nextDouble() * 19 + 1;
-        return depth;
-    }
-    private double getRiverSpeed()
-    {
-        double riverSpeed = myRandom.nextDouble() * 5;
-        return riverSpeed;
-    }
+    private double depth;
+    private double weight;
+    private double speed;
+    private double multiplyer;
     
-    private double getChanceOfFailure()
-    {
-        double chance = myRandom.nextDouble() + .01;
-        return chance;
-    }
-    
-    private boolean didWeFloat( double width, double depth
-                              , double riverSpeed, double chance)
-    {
-        if(width < 20 || depth < 1 || riverSpeed < 0 || width > 1000 || depth > 20 || riverSpeed > 5)
-        { 
-            return false;
-        }
-
-        double chanceOfFloat = (((width * 0.1) 
-                             + (depth * 0.5)) 
-                             * (riverSpeed * 0.1)) / 75;
+    public double calcSupplyDrop(double amntSuppliesDropped, double currentSupplies, double depth, double multiplyer, double speed, double weight, double amount) {
         
-        if (chanceOfFloat >= chance)
-        {
-            return false;
+        if (amount < 0 || weight < 0 || speed < 0 || weight > 300 || amount > 300 || speed > 5) {
+            
+            System.out.println("\nThe weight and amount must be greater than 0 and the weight and amount must be less than or equal to 300! Speed can only be 0 through 5!"); 
+            return -1;
         }
-        return true;
+        
+        if (depth >= 1 || depth <= 10 || weight >= 1 || weight <= 10 || speed == 0 || speed == 1) {
+            multiplyer = .005;
+        } 
+        else if (depth >= 11 || depth <= 100 ||weight >= 11 || weight <= 100 || speed == 2 || speed == 3)  {
+            multiplyer = .008;
+        }
+        else if (depth >= 101 || depth <= 299 || weight >= 101 || weight <= 299 || speed == 4 || speed == 5)
+            multiplyer = .01;
+        return 0;
+        }
+        double amntSuppliesDropped = depth * multiplyer + speed * multiplyer + weight * multiplyer;
+
     }
     
-    public boolean canWeFloat()
-    {
-        double width = getWidth();
-        double depth = getDepth();
-        double riverSpeed = getRiverSpeed();
-        double chance = getChanceOfFailure();
-        boolean weFloat = didWeFloat(width, depth, riverSpeed, chance);
-        return weFloat;
-    }
-}
+
