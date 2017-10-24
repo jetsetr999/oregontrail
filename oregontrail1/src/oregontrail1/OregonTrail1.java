@@ -18,6 +18,7 @@ import firstpackagejpp.FortScene;
 import firstpackagejpp.TownScene;
 import firstpackagejpp.RiverCrossingScene;
 import firstpackagejpp.TrailStopScene;
+import oregoncontrol.View.StartProgramView;
 /**
  *
  * @author parhe
@@ -165,6 +166,11 @@ public class OregonTrail1 {
                           + "  Normally this would delay you " + rainingMenDelay
                           + ", but the absurdity of this will take " 
                           + rainingMenExtraDelay + " days to get over.");
+        
+        // Beginning of view section
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+        
         
         /*
         FortScene
