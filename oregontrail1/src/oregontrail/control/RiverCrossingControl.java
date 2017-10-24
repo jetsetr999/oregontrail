@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package oregontrail.control;
-
-
+import java.util.Random;
 /**
- *
+ * Responsibility - evaluate chance of floating across river given
+ * random environmental variables.
  * @author Kyle Jones
  */
 public class RiverCrossingControl {

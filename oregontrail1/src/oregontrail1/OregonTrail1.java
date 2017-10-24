@@ -168,7 +168,7 @@ public class OregonTrail1 {
         
         /*
         FortScene
-        */
+        
         
         FortScene crystalSkull = new FortScene();
         
@@ -186,7 +186,7 @@ public class OregonTrail1 {
        
         /* 
         TownScene
-        */
+        
         TownScene golfClubs = new TownScene();
         
         golfClubs.setName("Callaway Clubs");
