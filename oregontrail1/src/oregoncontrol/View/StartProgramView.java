@@ -5,6 +5,7 @@
  */
 package oregoncontrol.View;
 import java.io.Console;
+import java.util.Scanner;
 import oregontrail.control.PlayerControl;
 /**
  *
@@ -19,10 +20,10 @@ public class StartProgramView {
 
 
         this.promptMessage = "\nPlease enter your name: ";
-        Console console = System.console();
-        String playerName = console.readLine();
-        PlayerControl playControl = new PlayerControl();
-        playControl.newPlayer(playerName);
+        // Console console = System.console();
+        // String playerName = console.readLine();
+        // PlayerControl playControl = new PlayerControl();
+        // playControl.newPlayer(playerName);
         // display banner
         this.displayBanner();
 
@@ -56,14 +57,43 @@ public class StartProgramView {
     }
 
     public void displayStartProgramView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+        boolean done = false; 
+	do {
+		String playersName = this.getPlayersName();
+		if (playersName.toUpperCase().equals("Q"))
+			return;
+		
+		done = this.doAction(playersName);
+		
+	} while (!done);
     }
-    
-    /*public void startMenu()
-    {
+
+    private String getPlayersName() {
         
-        
-        
-    }*/
-    
+        Scanner keyboard = new Scanner(System.in);
+	String value = "Fred Flintstone";
+	boolean valid = false;
+	
+	while (!valid) {
+            System.out.println("\n" + this.promptMessage);
+		
+            value = keyboard.nextLine();
+            value = value.trim();
+		
+            if (value.length() < 1) {
+		System.out.println("\nInvalid value: value can not be blank");
+		continue;
+		}
+		
+		break;
+	}
+	
+	return value;
+    }
+
+    private boolean doAction(String playersName) {
+        System.out.println("\n*** doAction() called ***");
+        return true;
+    }
 }
