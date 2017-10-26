@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 package oregoncontrol.View;
-import java.io.Console;
+import firstpackagejpp.Player;
 import java.util.Scanner;
-import oregontrail.control.PlayerControl;
+import oregontrail.control.GameControl;
+
 /**
  *
  * @author Darrin
@@ -93,7 +94,35 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called ***");
-        return true;
+        
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: "
+			+ "The name must be greater than one character in length");
+            return false;
+	}
+	
+	Player player = GameControl.createPlayer(playersName);
+	
+	if (player == null) {
+            System.out.println("\nError creating the player.");
+            return false;
+	}
+	
+	this.displayNextView(player);
+	
+	return true;
+}
+
+    private void displayNextView(Player player) {
+        
+        System.out.println("\n======================================="
+			+ "\n Welcome to the game " + player.getName()
+			+ "\n We hope you have a lot of fun!"
+			+ "\n========================================"
+			);
+						
+	MainMenuView mainMenuView = new MainMenuView();
+	
+	mainMenuView.displayMainMenuView();
     }
 }

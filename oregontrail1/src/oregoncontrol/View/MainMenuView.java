@@ -6,6 +6,8 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
+import oregontrail.control.GameControl;
+import oregontrail1.OregonTrail1;
 
 /**
  *
@@ -13,8 +15,8 @@ import java.util.Scanner;
  */
 public class MainMenuView {
     
-    private final String promptCommand;
     private String menu;
+    private String promptCommand;
 
     public MainMenuView() {
         this.menu = "\n"
@@ -67,8 +69,47 @@ public class MainMenuView {
 	return value;
     }
 
-    private boolean doAction(String menuOption) {
-        System.out.println("\n*** doAction() function called ***");
-        return true;
+    private boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase();
+        
+        switch (choice) {
+            case "N":
+                this.startNewGame();
+                break;
+            case "G":
+                this.startExistingGame();
+                break;
+            case "H":
+                this.displayHelpMenu();
+                break;
+            case "S":
+                this.saveGame();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+        }
+            return false;
     }
+
+    private void startNewGame() {
+        GameControl.createNewGame(OregonTrail1.getPlayer());
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }
+
+    private void startExistingGame() {
+        System.out.println("\n*** start existing game ***");
+    }
+
+    private void displayHelpMenu() {
+        System.out.println("\n*** display help menu ***");
+    }
+
+    private void saveGame() {
+        System.out.println("\n*** save game ***");
+    }
+                     
 }
