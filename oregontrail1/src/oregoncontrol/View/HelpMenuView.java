@@ -13,32 +13,31 @@ import oregontrail1.OregonTrail1;
  *
  * @author parhe
  */
-public class MainMenuView {
+public class HelpMenuView {
     
     private String menu;
     private String promptCommand;
 
-    public MainMenuView() {
+    public HelpMenuView() {
         this.menu = "\n"
-                  + "\n------------------------------"
-                  + "\n| Main Menu                  |"
-                  + "\n------------------------------"
-                  + "\nN - Start new game"
-                  + "\nG - Get and start saved game"
-                  + "\nH - Get help on how to play the game"  
-                  + "\nS - Save game"
-                  + "\nQ - Quit"                
-                  + "\n------------------------------";
+                  + "\n---------------------------------"
+                  + "\n| Help Menu                     |"
+                  + "\n---------------------------------"
+                  + "\nG - What is the goal of the game?"
+                  + "\nM - How to move"
+                  + "\nT - Tips"  
+                  + "\nR - Return to previous menu" 
+                  + "\n---------------------------------";
                             
                 
     }
 
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         
         boolean done = false;
         do {
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
+            if (menuOption.toUpperCase().equals("R"))
                 return;
             
             done = this.doAction(menuOption);
@@ -49,7 +48,7 @@ public class MainMenuView {
     private String getMenuOption() {
         
         Scanner keyboard = new Scanner(System.in);
-	String value = "N";
+	String value = "G";
 	boolean valid = false;
 	
 	while (!valid) {
@@ -74,17 +73,14 @@ public class MainMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-            case "N":
-                this.startNewGame();
-                break;
             case "G":
-                this.startExistingGame();
+                this.displayGameObjective();
                 break;
             case "H":
-                this.displayHelpMenu();
+                this.displayControls();
                 break;
-            case "S":
-                this.saveGame();
+            case "T":
+                this.displayTips();
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -100,18 +96,16 @@ public class MainMenuView {
         gameMenu.displayMenu();
     }
 
-    private void startExistingGame() {
-        System.out.println("\n*** start existing game ***");
+    private void displayGameObjective() {
+        System.out.println("\n*** displayGameObjective stub function called ***");
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
-        
-        helpMenuView.displayHelpMenuView();
+    private void displayControls() {
+        System.out.println("\n*** displayControls stub function called ***");
     }
 
-    private void saveGame() {
-        System.out.println("\n*** save game ***");
+    private void displayTips() {
+        System.out.println("\n*** displayTips stub function called ***");
     }
-                     
+                   
 }
