@@ -26,6 +26,7 @@ public class HelpMenuView {
                 + "\n\t G - Game strategy"
                 + "\n\t M - Learn How to move"
                 + "\n\t A - Game assists or Helpful hints"
+                + "\n\t D - Gsme definitions"
                 + "\n\t P - Return to previous menu"
                 + "\n\t ---------------------------------";
 
@@ -82,6 +83,9 @@ public class HelpMenuView {
             case "A":
                 this.displayAssists();
                 break;
+            case "D":
+                this.displayDefinitions();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -106,6 +110,10 @@ public class HelpMenuView {
 
     private void displayAssists() {
         System.out.println("\n*** displayAssists stub function called ***");
+    }
+
+    private void displayDefinitions() {
+        System.out.println("\n*** displayDefinitions stub function called ***");
     }
 
 }
