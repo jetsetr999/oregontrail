@@ -18,6 +18,10 @@ public class MainMenuView {
     private String menu;
     private String promptCommand;
 
+    /*
+     * We are leaving the commands for the Main Menu commands 
+     * the same as the instructions for ease of use.
+     */
     public MainMenuView() {
         this.menu = "\n"
                   + "\n------------------------------"
@@ -46,6 +50,7 @@ public class MainMenuView {
     
     }
 
+    // 
     private String getMenuOption() {
         
         Scanner keyboard = new Scanner(System.in);
@@ -71,20 +76,20 @@ public class MainMenuView {
 
     private boolean doAction(String choice) {
         
-        choice = choice.toUpperCase();
+        choice = choice.toUpperCase(); // lowercase will work for uppercase
         
         switch (choice) {
             case "N":
-                this.startNewGame();
+                this.startNewGame(); // Start New Game
                 break;
             case "G":
-                this.startExistingGame();
+                this.startExistingGame(); // Load Game
                 break;
             case "H":
-                this.displayHelpMenu();
+                this.displayHelpMenu(); // Help Menu
                 break;
             case "S":
-                this.saveGame();
+                this.saveGame(); // Save Game
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -93,6 +98,7 @@ public class MainMenuView {
             return false;
     }
 
+    // calls the new game
     private void startNewGame() {
         GameControl.createNewGame(OregonTrail1.getPlayer());
         
@@ -100,16 +106,19 @@ public class MainMenuView {
         gameMenu.displayMenu();
     }
 
+    // stub function
     private void startExistingGame() {
         System.out.println("\n*** start existing game ***");
     }
 
+    // calls the help menu
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         
         helpMenuView.displayHelpMenuView();
     }
 
+    // stub function
     private void saveGame() {
         System.out.println("\n*** save game ***");
     }
