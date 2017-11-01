@@ -16,7 +16,7 @@ public class WeatherEvent extends Event implements Serializable
     private int extraDelay;
 
     public WeatherEvent() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("this is stub for weather event");
     }
 
     public int getExtraDelay() {

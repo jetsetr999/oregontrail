@@ -120,9 +120,13 @@ public class StartProgramView {
 			+ "\n We hope you have a lot of fun!"
 			+ "\n========================================"
 			);
-						
+	GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();	
+        
 	MainMenuView mainMenuView = new MainMenuView();
 	
 	mainMenuView.displayMainMenuView();
+        
+        
     }
 }

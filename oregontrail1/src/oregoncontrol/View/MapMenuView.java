@@ -11,28 +11,28 @@ import oregontrail1.OregonTrail1;
 
 /**
  *
- * @author parhe
+ * @author Darrin
  */
-public class HelpMenuView {
+public class MapMenuView {
 
     private String menu;
     private String promptCommand;
 
-    public HelpMenuView() {
+    public MapMenuView() {
         this.menu = "\n"
                 + "\n\t ---------------------------------"
-                + "\n\t | Help Menu                     |"
+                + "\n\t | Map Menu                     |"
                 + "\n\t ---------------------------------"
-                + "\n\t G - Game strategy"
-                + "\n\t M - Learn How to move"
-                + "\n\t A - Game assists or Helpful hints"
-                + "\n\t D - Gsme definitions"
+                + "\n\t M - Full Map View"
+                + "\n\t D - Distance to next town, fort, or checkpoint"
+                + "\n\t E - Distance to final destination"
+                + "\n\t T - Distance Traveled "
                 + "\n\t P - Return to previous menu"
                 + "\n\t ---------------------------------";
 
     }
 
-    public void displayHelpMenuView() {
+    public void displayMapMenuView() {
 
         boolean done = false;
         do {
@@ -53,7 +53,7 @@ public class HelpMenuView {
     private String getMenuOption() {
 
         Scanner keyboard = new Scanner(System.in);
-        String value = "G";
+        String value = "M";
         boolean valid = false;
 
         while (!valid) {
@@ -78,17 +78,17 @@ public class HelpMenuView {
         choice = choice.toUpperCase();
 
         switch (choice) {
-            case "G":
-                this.displayGameStrategy();
-                break;
             case "M":
-                this.displayMovement();
-                break;
-            case "A":
-                this.displayAssists();
+                this.displayMapView();
                 break;
             case "D":
-                this.displayDefinitions();
+                this.displayDistanceNext();
+                break;
+            case "E":
+                this.displayDistanceFinal();
+                break;
+            case "T":
+                this.displayDistanceTraveled();
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -104,32 +104,33 @@ public class HelpMenuView {
         gameMenu.displayMenu();
     }
 
-    private void displayGameStrategy() {
-        System.out.println("\n*** displayGameStrategy stub function called ***");
+    private void displayMapView() {
+        System.out.println("\n*** displayMapView stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
-    private void displayMovement() {
-        System.out.println("\n*** displayMovement stub function called ***");
+    private void displayDistanceNext() {
+        System.out.println("\n*** displayDistanceNext stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
-    private void displayAssists() {
-        System.out.println("\n*** displayAssists stub function called ***");
+    private void displayDistanceFinal() {
+        System.out.println("\n*** displayDistanceFinal stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
-    private void displayDefinitions() {
-        System.out.println("\n*** displayDefinitions stub function called ***");
+    private void displayDistanceTraveled() {
+        System.out.println("\n*** displayDistanceTraveled stub function called "
+                + "***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
 }

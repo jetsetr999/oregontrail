@@ -14,7 +14,7 @@ import oregontrail1.OregonTrail1;
  * @author parhe
  */
 public class MainMenuView {
-    
+
     private String menu;
     private String promptCommand;
 
@@ -24,60 +24,61 @@ public class MainMenuView {
      */
     public MainMenuView() {
         this.menu = "\n"
-                  + "\n------------------------------"
-                  + "\n| Main Menu                  |"
-                  + "\n------------------------------"
-                  + "\nN - Start new game"
-                  + "\nG - Get and start saved game"
-                  + "\nH - Get help on how to play the game"  
-                  + "\nS - Save game"
-                  + "\nQ - Quit"                
-                  + "\n------------------------------";
-                            
-                
+                + "\n------------------------------"
+                + "\n| Main Menu                  |"
+                + "\n------------------------------"
+                + "\nN - Start new game"
+                + "\nG - Get and start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
+                + "\nM - Map View"
+                + "\nQ - Quit"
+                + "\n------------------------------";
+
     }
 
     public void displayMainMenuView() {
-        
+
         boolean done = false;
         do {
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
+            if (menuOption.toUpperCase().equals("Q")) {
                 return;
-            
+            }
+
             done = this.doAction(menuOption);
         } while (!done);
-    
+
     }
 
     // 
     private String getMenuOption() {
-        
+
         Scanner keyboard = new Scanner(System.in);
-	String value = "N";
-	boolean valid = false;
-	
-	while (!valid) {
+        String value = "N";
+        boolean valid = false;
+
+        while (!valid) {
             System.out.println("\n" + this.promptCommand);
-		
+
             value = keyboard.nextLine();
             value = value.trim();
-		
+
             if (value.length() < 1) {
-		System.out.println("\nInvalid value: value can not be blank");
-		continue;
-		}
-		
-		break;
-	}
-	
-	return value;
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+
+            break;
+        }
+
+        return value;
     }
 
     private boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase(); // lowercase will work for uppercase
-        
+
         switch (choice) {
             case "N":
                 this.startNewGame(); // Start New Game
@@ -88,6 +89,9 @@ public class MainMenuView {
             case "H":
                 this.displayHelpMenu(); // Help Menu
                 break;
+            case "M":
+                this.displayMapMenu(); // map menu
+                break;
             case "S":
                 this.saveGame(); // Save Game
                 break;
@@ -95,32 +99,50 @@ public class MainMenuView {
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-            return false;
+        return false;
     }
 
     // calls the new game
     private void startNewGame() {
         GameControl.createNewGame(OregonTrail1.getPlayer());
-        
+
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }
 
-    // stub function
+    // existing game
     private void startExistingGame() {
         System.out.println("\n*** start existing game ***");
+
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     // calls the help menu
     private void displayHelpMenu() {
+        GameMenuView helpMenu = new GameMenuView();
+        helpMenu.displayHelpMenu();
+
         HelpMenuView helpMenuView = new HelpMenuView();
-        
         helpMenuView.displayHelpMenuView();
+
     }
 
     // stub function
     private void saveGame() {
         System.out.println("\n*** save game ***");
+
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
-                     
+
+    // calls the map menu
+    private void displayMapMenu() {
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
+
+        MapMenuView mapMenuView = new MapMenuView();
+        mapMenuView.displayMapMenuView();
+
+    }
 }
