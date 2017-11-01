@@ -5,7 +5,6 @@
  */
 package oregoncontrol.View;
 
-import firstpackagejpp.Player;
 import firstpackagejpp.WeatherEvent;
 import java.util.Scanner;
 import oregontrail.control.GameControl;
