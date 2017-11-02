@@ -26,7 +26,7 @@ public class HelpMenuView {
                 + "\n\t G - Game strategy"
                 + "\n\t M - Learn How to move"
                 + "\n\t A - Game assists or Helpful hints"
-                + "\n\t D - Gsme definitions"
+                + "\n\t D - Game definitions"
                 + "\n\t P - Return to previous menu"
                 + "\n\t ---------------------------------";
 
@@ -38,10 +38,6 @@ public class HelpMenuView {
         do {
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("P")) {
-
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
-
                 return;
             }
 
@@ -90,6 +86,9 @@ public class HelpMenuView {
             case "D":
                 this.displayDefinitions();
                 break;
+            case "P":
+                this.returnToPreviousMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -97,39 +96,52 @@ public class HelpMenuView {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(OregonTrail1.getPlayer());
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-
     private void displayGameStrategy() {
-        System.out.println("\n*** displayGameStrategy stub function called ***");
+        System.out.println(
+                  "\n--------------------------------"
+                + "\n Write a game strategy          "
+                + "\n                                "
+                + "\n                                "
+                + "\n                                "
+                + "\n--------------------------------"
+        );
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
     private void displayMovement() {
         System.out.println("\n*** displayMovement stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+        MovementView movementView = new MovementView();
+        movementView.displayMovementView();
     }
 
     private void displayAssists() {
-        System.out.println("\n*** displayAssists stub function called ***");
+        System.out.println(
+                  "\n--------------------------------"
+                + "\n Display Assists/Helpful Hints  "
+                + "\n                                "
+                + "\n                                "
+                + "\n                                "
+                + "\n--------------------------------"
+        );
+                    
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
     private void displayDefinitions() {
-        System.out.println("\n*** displayDefinitions stub function called ***");
+        System.out.println(
+                  "\n--------------------------------"
+                + "\n Game Definitions               "
+                + "\n                                "
+                + "\n                                "
+                + "\n                                "
+                + "\n--------------------------------"
+        );
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
+    }
+
+    private void returnToPreviousMenu() {
+        System.out.println("\n*** return function called");
     }
 
 }
