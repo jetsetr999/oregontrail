@@ -13,11 +13,19 @@ import oregontrail1.OregonTrail1;
  *
  * @author parhe
  */
-public class TeamPaceView {
+public final class TeamPaceView {
     
     private String promptCommand;
     
     public TeamPaceView() {
+        
+        this.promptCommand = "\nPlease Make Selection: ";
+        
+        this.displayTeamPaceBanner();
+    }
+    
+    
+    public void displayTeamPaceBanner() {
         
                 System.out.println(
                     "\n---------------------------------"
@@ -95,19 +103,19 @@ public class TeamPaceView {
     }
 
     private void setPaceToSlow() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Set Pace Slow function called ***");
     }
 
     private void setPaceToAverage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Set Pace Average function called ***");
     }
 
     private void setPaceToFast() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Set Pace Fast function called ***");
     }
 
     private void returnToGameMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Return To Game Menu function called ***");
     }    
     
 }
