@@ -16,9 +16,18 @@ import oregontrail1.OregonTrail1;
  */
 public class GameMenuView {
     
-    private String promptCommand;
+    private String menu;
+    private final String promptCommand;
+    
+    public GameMenuView() {
+        
+    this.promptCommand = "\nPlease Make Selection: ";
+        
+    this.displayGameMenuBanner();
+        
+    }
 
-    public void gameMenuView() {
+    public void displayGameMenuBanner() {
         
                 System.out.println(
                       "\n******************************************************"
@@ -57,8 +66,7 @@ public class GameMenuView {
         
         Scanner keyboard = new Scanner(System.in);
 	String value = "N";
-	boolean valid = false;
-	
+	boolean valid = false; 
 	while (!valid) {
             System.out.println("\n" + this.promptCommand);
 		
@@ -76,7 +84,7 @@ public class GameMenuView {
 	return value;
     }
     
-        private boolean doAction(String choice) {
+    private boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
@@ -110,11 +118,14 @@ public class GameMenuView {
     }
 
     private void viewTeamStatus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        TeamStatusView teamStatusView = new TeamStatusView();
+        
+        teamStatusView.displayTeamStatusView();
     }
 
     private void viewTeamSupplies() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Team Status Called");
     }
 
     private void setTeamPace() {
@@ -124,11 +135,11 @@ public class GameMenuView {
     }
 
     private void sceneMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Scene Menu Called");
     }
 
     private void viewMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** View Map Called");
     }
 
     private void helpMenu() {
@@ -138,12 +149,10 @@ public class GameMenuView {
     }
 
     private void returnToMainMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** Return To Main Menu Called");
     }
 
-    void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
     
     
