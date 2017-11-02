@@ -6,6 +6,7 @@
 package oregontrail.control;
 
 import firstpackagejpp.Player;
+import firstpackagejpp.WeatherEvent;
 import oregontrail1.OregonTrail1;
 
 /**
@@ -30,5 +31,9 @@ public class GameControl {
 
     public static void createNewGame(Player player) {
         System.out.println("\n*** createNewGame stub function called ***");
+    }
+
+    public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
