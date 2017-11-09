@@ -38,6 +38,10 @@ public class MapMenuView {
         do {
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("P")) {
+
+                GameMenuView gameMenu = new GameMenuView();
+                gameMenu.displayMenu();
+
                 return;
             }
 
@@ -75,7 +79,7 @@ public class MapMenuView {
 
         switch (choice) {
             case "M":
-                this.displayFullMapView();
+                this.displayMapView();
                 break;
             case "D":
                 this.displayDistanceNext();
@@ -93,27 +97,40 @@ public class MapMenuView {
         return false;
     }
 
-    private void displayFullMapView() {
+    private void startNewGame() {
+        GameControl.createNewGame(OregonTrail1.getPlayer());
+
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }
+
+    private void displayMapView() {
         System.out.println("\n*** displayMapView stub function called ***");
 
-        FullMapView fullMapView = new FullMapView();
-        fullMapView.displayFullMapMenu();
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
     private void displayDistanceNext() {
-        System.out.println("\n*** Distance to next town is: ***");
+        System.out.println("\n*** displayDistanceNext stub function called ***");
 
-        
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
     private void displayDistanceFinal() {
-        System.out.println("\n*** Distance to finish ***");
+        System.out.println("\n*** displayDistanceFinal stub function called ***");
 
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
     private void displayDistanceTraveled() {
-        System.out.println("\n*** Distance Travel ***");
+        System.out.println("\n*** displayDistanceTraveled stub function called "
+                + "***");
 
+        GameMenuView mapMenu = new GameMenuView();
+        mapMenu.displayMapMenu();
     }
 
 }

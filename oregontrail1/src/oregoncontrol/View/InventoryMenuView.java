@@ -11,33 +11,32 @@ import oregontrail1.OregonTrail1;
 
 /**
  *
- * @author parhe
+ * @author Kyle Jones
  */
-public class MainMenuView {
-
-    private String menu;
+public class InventoryMenuView 
+{
+ private String menu;
     private String promptCommand;
 
     /*
      * We are leaving the commands for the Main Menu commands 
      * the same as the instructions for ease of use.
      */
-    public MainMenuView() {
+    public InventoryMenuView() {
         this.menu = "\n"
                 + "\n------------------------------"
-                + "\n| Main Menu                  |"
+                + "\n| Inventory Menu             |"
                 + "\n------------------------------"
-                + "\nN - Start new game"
-                + "\nG - Get and start saved game"
-                + "\nH - Get help on how to play the game"
-                + "\nS - Save game"
-                + "\nM - Map View"
+                + "\nL - List of Items"
+                + "\nF - Amount of Food"
+                + "\nM - Buy from Store"
+                + "\nT - Trade"
                 + "\nQ - Quit"
                 + "\n------------------------------";
 
     }
 
-    public void displayMainMenuView() {
+    public void displayInventoryMenuView() {
 
         boolean done = false;
         do {
@@ -80,69 +79,42 @@ public class MainMenuView {
         choice = choice.toUpperCase(); // lowercase will work for uppercase
 
         switch (choice) {
-            case "N":
-                this.startNewGame(); // Start New Game
+            case "L":
+                this.listItems(); // Start New Game
                 break;
-            case "G":
-                this.startExistingGame(); // Load Game
-                break;
-            case "H":
-                this.displayHelpMenu(); // Help Menu
+            case "F":
+                this.foodAmount(); // Load Game
                 break;
             case "M":
-                this.displayMapMenu(); // map menu
+                this.merchantStore(); // Help Menu
                 break;
-            case "S":
-                this.saveGame(); // Save Game
+            case "T":
+                this.trade(); // Help Menu
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
+    }  
+
+    private void listItems() 
+    {
+         System.out.println("\n*** listItems stub function called ***");
     }
 
-    // calls the new game
-    private void startNewGame() {
-        GameControl.createNewGame(OregonTrail1.getPlayer());
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void foodAmount() 
+    {
+        System.out.println("\n*** foodAmount stub function called ***");
     }
 
-    // existing game
-    private void startExistingGame() {
-        System.out.println("\n*** start existing game ***");
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void merchantStore() 
+    {
+        System.out.println("\n*** merchantStore stub function called ***");
     }
 
-    // calls the help menu
-    private void displayHelpMenu() {
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
-
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayHelpMenuView();
-
-    }
-
-    // stub function
-    private void saveGame() {
-        System.out.println("\n*** save game ***");
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-
-    // calls the map menu
-    private void displayMapMenu() {
-        GameMenuView mapMenu = new GameMenuView();
-        mapMenu.displayMapMenu();
-
-        MapMenuView mapMenuView = new MapMenuView();
-        mapMenuView.displayMapMenuView();
-
+    private void trade() 
+    {
+        System.out.println("\n*** trade stub function called ***");
     }
 }
