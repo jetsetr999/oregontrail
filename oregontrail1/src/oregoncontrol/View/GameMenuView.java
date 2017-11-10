@@ -149,7 +149,7 @@ public class GameMenuView {
 
     private void returnToMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
-	mainMenuView.displayMainMenuView();
+	mainMenuView.display();
     }
 
 }
