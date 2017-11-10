@@ -94,18 +94,22 @@ public class GameMenuView extends View {
 
     private void viewMap() {
         MapMenuView mapMenuView = new MapMenuView();
-        mapMenuView.displayMapMenuView();
+        mapMenuView.display();
     }
 
     private void helpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
 
     private void returnToMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
 	mainMenuView.display();
+    }
+
+    void displayGameMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

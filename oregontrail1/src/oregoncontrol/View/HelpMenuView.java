@@ -6,20 +6,15 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
-import oregontrail.control.GameControl;
-import oregontrail1.OregonTrail1;
 
 /**
  *
  * @author parhe
  */
-public class HelpMenuView {
-
-    private String menu;
-    private String promptCommand;
+public class HelpMenuView extends View {
 
     public HelpMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n\t ---------------------------------"
                 + "\n\t | Help Menu                     |"
                 + "\n\t ---------------------------------"
@@ -27,53 +22,13 @@ public class HelpMenuView {
                 + "\n\t M - Learn How to move"
                 + "\n\t A - Game assists or Helpful hints"
                 + "\n\t D - Gsme definitions"
-                + "\n\t P - Return to previous menu"
-                + "\n\t ---------------------------------";
+                + "\n\t R - Return to previous menu"
+                + "\n\t ---------------------------------");
 
     }
 
-    public void displayHelpMenuView() {
-
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("P")) {
-
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayGameMenuView();
-
-                return;
-            }
-
-            done = this.doAction(menuOption);
-        } while (!done);
-
-    }
-
-    private String getMenuOption() {
-
-        Scanner keyboard = new Scanner(System.in);
-        String value = "G";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.promptCommand);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-
-            break;
-        }
-
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase();
 
@@ -90,18 +45,14 @@ public class HelpMenuView {
             case "D":
                 this.displayDefinitions();
                 break;
+            case "R":
+                this.returnToMainMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
-    }
-
-    private void startNewGame() {
-        GameControl.createNewGame(OregonTrail1.getPlayer());
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
     }
 
     private void displayGameStrategy() {
@@ -124,4 +75,14 @@ public class HelpMenuView {
 
     }
 
+    private void returnToMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+
+    void displayHelpMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }

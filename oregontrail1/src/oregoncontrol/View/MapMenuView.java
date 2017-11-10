@@ -13,13 +13,10 @@ import oregontrail1.OregonTrail1;
  *
  * @author Darrin
  */
-public class MapMenuView {
-
-    private String menu;
-    private String promptCommand;
+public class MapMenuView extends View {
 
     public MapMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n\t ---------------------------------"
                 + "\n\t | Map Menu                     |"
                 + "\n\t ---------------------------------"
@@ -27,53 +24,13 @@ public class MapMenuView {
                 + "\n\t D - Distance to next town, fort, or checkpoint"
                 + "\n\t E - Distance to final destination"
                 + "\n\t T - Distance Traveled "
-                + "\n\t P - Return to previous menu"
-                + "\n\t ---------------------------------";
+                + "\n\t R - Return to previous menu"
+                + "\n\t ---------------------------------");
 
     }
 
-    public void displayMapMenuView() {
-
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("P")) {
-
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayGameMenuView();
-
-                return;
-            }
-
-            done = this.doAction(menuOption);
-        } while (!done);
-
-    }
-
-    private String getMenuOption() {
-
-        Scanner keyboard = new Scanner(System.in);
-        String value = "M";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.promptCommand);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-
-            break;
-        }
-
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase();
 
@@ -90,6 +47,9 @@ public class MapMenuView {
             case "T":
                 this.displayDistanceTraveled();
                 break;
+            case "R":
+                this.returnToMainMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -97,16 +57,8 @@ public class MapMenuView {
         return false;
     }
 
-    private void displayFullMapView() {
-        GameControl.createNewGame(OregonTrail1.getPlayer());
-
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
-    }
-
     private void displayMapView() {
         System.out.println("\n*** displayMapView stub function called ***");
-
 
     }
 
@@ -125,4 +77,10 @@ public class MapMenuView {
                 + "***");
     }
 
+    private void returnToMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+	mainMenuView.display();
+    }
+
+    
 }
