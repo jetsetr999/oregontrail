@@ -115,7 +115,8 @@ public final class TeamPaceView {
     }
 
     private void returnToGameMenuView() {
-        System.out.println("\n*** Return To Game Menu function called ***");
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
     }    
     
 }
