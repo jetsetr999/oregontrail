@@ -40,7 +40,7 @@ public class MapMenuView {
             if (menuOption.toUpperCase().equals("P")) {
 
                 GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
+                gameMenu.displayGameMenuView();
 
                 return;
             }
@@ -97,40 +97,32 @@ public class MapMenuView {
         return false;
     }
 
-    private void startNewGame() {
+    private void displayFullMapView() {
         GameControl.createNewGame(OregonTrail1.getPlayer());
 
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenuView();
     }
 
     private void displayMapView() {
         System.out.println("\n*** displayMapView stub function called ***");
 
-        GameMenuView mapMenu = new GameMenuView();
-        mapMenu.displayMapMenu();
+
     }
 
     private void displayDistanceNext() {
         System.out.println("\n*** displayDistanceNext stub function called ***");
 
-        GameMenuView mapMenu = new GameMenuView();
-        mapMenu.displayMapMenu();
     }
 
     private void displayDistanceFinal() {
         System.out.println("\n*** displayDistanceFinal stub function called ***");
 
-        GameMenuView mapMenu = new GameMenuView();
-        mapMenu.displayMapMenu();
     }
 
     private void displayDistanceTraveled() {
         System.out.println("\n*** displayDistanceTraveled stub function called "
                 + "***");
-
-        GameMenuView mapMenu = new GameMenuView();
-        mapMenu.displayMapMenu();
     }
 
 }
