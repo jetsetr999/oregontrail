@@ -40,7 +40,7 @@ public class HelpMenuView {
             if (menuOption.toUpperCase().equals("P")) {
 
                 GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
+                gameMenu.displayGameMenuView();
 
                 return;
             }
@@ -101,35 +101,27 @@ public class HelpMenuView {
         GameControl.createNewGame(OregonTrail1.getPlayer());
 
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenuView();
     }
 
     private void displayGameStrategy() {
         System.out.println("\n*** displayGameStrategy stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
     private void displayMovement() {
         System.out.println("\n*** displayMovement stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
     private void displayAssists() {
         System.out.println("\n*** displayAssists stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
     private void displayDefinitions() {
         System.out.println("\n*** displayDefinitions stub function called ***");
 
-        GameMenuView helpMenu = new GameMenuView();
-        helpMenu.displayHelpMenu();
     }
 
 }
