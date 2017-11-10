@@ -47,7 +47,7 @@ public class EventView {
                 + "\n========================================"
         );
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
+        gameMenu.display();
 
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
