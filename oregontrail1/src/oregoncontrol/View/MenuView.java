@@ -85,7 +85,7 @@ public class MenuView {
     }
 
     void displayTeamStatusView() {
-        System.out.println( "\n"
+        System.out.println("\n"
                 + "\n\t ------------------------------"
                 + "\n\t | Team Status                |"
                 + "\n\t ------------------------------"
@@ -97,5 +97,26 @@ public class MenuView {
                 + "\n\t ------------------------------");
 
     }
-    
+
+    void displayGameMenuBanner() {
+        System.out.println("\n"
+                + "\n\t ***************************************************"
+                + "\n\t |Current State Information:                       |"
+                + "\n\t Today is (place current date and time here)        "
+                + "\n\t Distance traveled is (place distance traveled)     "
+                + "\n\t Remaining distance is (place remaining distance)   "
+                + "\n\t (display surrounding towns, rivers, mountains, exc)"
+                + "\n\t (display events/scenes)                            "
+                + "\n\t |Options:                                         |"
+                + "\n\t T - View Team Status                               "
+                + "\n\t S - View Team Supplies                             "
+                + "\n\t P - Set Team Pace                                  "
+                + "\n\t A - Scene Menu (based upon active scene)           "
+                + "\n\t M - View The Map                                   "
+                + "\n\t H - Help Menu                                      "
+                + "\n\t R - Return To Main Menu                            "
+                + "\n\t ***************************************************"
+        );
+
+    }
 }

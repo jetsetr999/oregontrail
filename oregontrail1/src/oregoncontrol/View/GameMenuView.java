@@ -21,32 +21,10 @@ public class GameMenuView {
         
     this.promptCommand = "\nPlease Make Selection: ";
         
-    this.displayGameMenuBanner();
+    //this.displayGameMenuBanner();
         
     }
 
-    public void displayGameMenuBanner() {
-        
-                System.out.println(
-                      "\n******************************************************"
-                    + "\n |Current State Information:                         |"
-                    + "\n Today is (place current date and time here)          "                                             
-                    + "\n Distance traveled is (place distance traveled)       "
-                    + "\n Remaining distance is (place remaining distance)     "
-                    + "\n (display surrounding towns, rivers, mountains, exc)  "
-                    + "\n (display events/scenes)                              "
-                    + "\n |Options:                                           |"
-                    + "\nT - View Team Status                                  "
-                    + "\nS - View Team Supplies                                "
-                    + "\nP - Set Team Pace                                     "
-                    + "\nA - Scene Menu (based upon active scene)              "
-                    + "\nM - View The Map                                      "
-                    + "\nH - Help Menu                                         "
-                    + "\nR - Return To Main Menu                               "
-                    + "\n******************************************************"
-                );
-    }
-    
     public void displayGameMenuView() {
         
         boolean done = false;
