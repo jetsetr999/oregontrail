@@ -13,22 +13,11 @@ import oregontrail1.OregonTrail1;
  *
  * @author parhe
  */
-public final class TeamPaceView {
-    
-    private String promptCommand;
+public class TeamPaceView extends View {
     
     public TeamPaceView() {
-        
-        this.promptCommand = "\nPlease Make Selection: ";
-        
-        this.displayTeamPaceBanner();
-    }
-    
-    
-    public void displayTeamPaceBanner() {
-        
-                System.out.println(
-                    "\n---------------------------------"
+            super("\n"
+                  + "\n---------------------------------"
                   + "\n| Team Pace Menu                |"
                   + "\n---------------------------------"
                   + "\n Current Team Pace =             "
@@ -42,43 +31,8 @@ public final class TeamPaceView {
                 );
     }
 
-    public void displayTeamPaceMenuView() {
-        
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("R"))
-                return;
-            
-            done = this.doAction(menuOption);
-        } while (!done);
-    
-    }
-
-    private String getMenuOption() {
-        
-        Scanner keyboard = new Scanner(System.in);
-	String value = "G";
-	boolean valid = false;
-	
-	while (!valid) {
-            System.out.println("\n" + this.promptCommand);
-		
-            value = keyboard.nextLine();
-            value = value.trim();
-		
-            if (value.length() < 1) {
-		System.out.println("\nInvalid value: value can not be blank");
-		continue;
-		}
-		
-		break;
-	}
-	
-	return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
@@ -116,7 +70,7 @@ public final class TeamPaceView {
 
     private void returnToGameMenuView() {
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }    
     
 }
