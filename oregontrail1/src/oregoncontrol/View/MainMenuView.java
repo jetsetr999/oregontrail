@@ -14,27 +14,11 @@ import oregontrail1.OregonTrail1;
  * @author parhe
  */
 
-public final class MainMenuView {
-
-    private String menu;
-    private final String promptCommand;
+public class MainMenuView extends View {
     
     public MainMenuView() {
-        
-        this.promptCommand = "\nPlease Make Selection: ";
-        
-        this.displayMainMenuBanner();
-        
-    }
-
-    /*
-     * We are leaving the commands for the Main Menu commands 
-     * the same as the instructions for ease of use.
-     */
-    public void displayMainMenuBanner() {
-               
-            System.out.println(
-                  "\n"
+         
+          super("\n"
                 + "\n------------------------------"
                 + "\n| Main Menu                  |"
                 + "\n------------------------------"
@@ -49,45 +33,8 @@ public final class MainMenuView {
 
     }
 
-    public void displayMainMenuView() {
-
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-
-            done = this.doAction(menuOption);
-        } while (!done);
-
-    }
-
-    // 
-    private String getMenuOption() {
-
-        Scanner keyboard = new Scanner(System.in);
-        String value = "N";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.promptCommand);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-
-            break;
-        }
-
-        return value;
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); // lowercase will work for uppercase
 
