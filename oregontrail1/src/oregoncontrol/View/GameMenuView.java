@@ -12,55 +12,33 @@ import java.util.Scanner;
  * @author Darrin
  */
 
-public class GameMenuView {
-    
-    private String menu;
-    private final String promptCommand;
+public class GameMenuView extends View {
+   
     
     public GameMenuView() {
-        
-    this.promptCommand = "\nPlease Make Selection: ";
-        
-    //this.displayGameMenuBanner();
+          super("\n"
+                + "\n\t ***************************************************"
+                + "\n\t |Current State Information:                       |"
+                + "\n\t Today is (place current date and time here)        "
+                + "\n\t Distance traveled is (place distance traveled)     "
+                + "\n\t Remaining distance is (place remaining distance)   "
+                + "\n\t (display surrounding towns, rivers, mountains, exc)"
+                + "\n\t (display events/scenes)                            "
+                + "\n\t |Options:                                         |"
+                + "\n\t T - View Team Status                               "
+                + "\n\t S - View Team Supplies                             "
+                + "\n\t P - Set Team Pace                                  "
+                + "\n\t A - Scene Menu (based upon active scene)           "
+                + "\n\t M - View The Map                                   "
+                + "\n\t H - Help Menu                                      "
+                + "\n\t R - Return To Main Menu                            "
+                + "\n\t ***************************************************"
+        );
         
     }
-
-    public void displayGameMenuView() {
-        
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            
-            done = this.doAction(menuOption);
-        } while (!done);
     
-    }
-    
-    private String getMenuOption() {
-        
-        Scanner keyboard = new Scanner(System.in);
-	String value = "N";
-	boolean valid = false; 
-	while (!valid) {
-            System.out.println("\n" + this.promptCommand);
-		
-            value = keyboard.nextLine();
-            value = value.trim();
-		
-            if (value.length() < 1) {
-		System.out.println("\nInvalid value: value can not be blank");
-		continue;
-		}
-		
-		break;
-	}
-	
-	return value;
-    }
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
@@ -107,7 +85,7 @@ public class GameMenuView {
     private void setTeamPace() {
         TeamPaceView teamPaceView = new TeamPaceView();
         
-        teamPaceView.displayTeamPaceMenuView();
+        teamPaceView.display();
     }
 
     private void sceneMenu() {
@@ -131,3 +109,4 @@ public class GameMenuView {
     }
 
 }
+
