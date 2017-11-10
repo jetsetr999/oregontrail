@@ -66,7 +66,7 @@ public class MainMenuView extends View {
         GameControl.createNewGame(OregonTrail1.getPlayer());
 
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }
 
     // existing game
@@ -74,7 +74,7 @@ public class MainMenuView extends View {
         System.out.println("\n*** start existing game ***");
 
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }
 
     // calls the help menu
