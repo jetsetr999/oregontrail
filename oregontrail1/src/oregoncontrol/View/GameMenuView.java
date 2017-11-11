@@ -29,6 +29,7 @@ public class GameMenuView extends View {
                 + "\n\t S - View Team Supplies                             "
                 + "\n\t P - Set Team Pace                                  "
                 + "\n\t A - Scene Menu (based upon active scene)           "
+                + "\n\t N - Player Menu /new/edit/delete/reset/            "  
                 + "\n\t M - View The Map                                   "
                 + "\n\t H - Help Menu                                      "
                 + "\n\t R - Return To Main Menu                            "
@@ -54,6 +55,9 @@ public class GameMenuView extends View {
                 break;
             case "A":
                 this.sceneMenu();
+                break;
+            case "N":
+                this.playerMenu();
                 break;
             case "M":
                 this.viewMap();
@@ -110,6 +114,11 @@ public class GameMenuView extends View {
 
     void displayGameMenuView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void playerMenu() {
+        PlayerMenuView playerMenuView = new PlayerMenuView();        
+        playerMenuView.display();
     }
 
 }
