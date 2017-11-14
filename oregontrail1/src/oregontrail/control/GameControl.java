@@ -41,8 +41,12 @@ public class GameControl {
         
         if (gameNum == null) {
             return null;         
-        }         
-    game = create a new Game object
+        }       
+        
+        Game game = new Game();
+        game.setPlayer(player);
+        
+        OregonTrail1.currentGame(game);
     /*Save a reference to the Player object in the game
     Save a reference to the game in the main class
     actors = createActors()
