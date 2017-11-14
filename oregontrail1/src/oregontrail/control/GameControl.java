@@ -37,9 +37,9 @@ public class GameControl {
     /**
      * create game number for index purpose
      */
-    public static GameNum createGameNum( int gameNum ){
+    public static CurrentGame createCurrentGame( int currentGame ){
         
-        if (gameNum == null) {
+        if (currentGame == null) {
             return null;         
         }       
         
@@ -61,6 +61,8 @@ public class GameControl {
     Assign the map to the game
     RETURN 1 // indicates success*/
 }
+
+    
     }
 
     public static WeatherEvent createWeatherChoice(String weatherChoice) {
