@@ -34,10 +34,16 @@ public class GameControl {
         if (player == null)
             return -1;
         
-        public static 
-                    
-  /*    game = create a new Game object
-    Save a reference to the Player object in the game
+    /**
+     * create game number for index purpose
+     */
+    public static GameNum createGameNum( int gameNum ){
+        
+        if (gameNum == null) {
+            return null;         
+        }         
+    game = create a new Game object
+    /*Save a reference to the Player object in the game
     Save a reference to the game in the main class
     actors = createActors()
     Save the list of actors in the Game object
