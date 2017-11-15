@@ -29,11 +29,11 @@ public class GameControl {
         return player;   
 }
 
-    public static void createNewGame(Player player) {
+    public static int createNewGame(Player player) {
         
-        if (player == null)
+        if (player == null) {
             return -1;
-        
+        } 
     /**
      * create game number for index purpose
      */
@@ -64,6 +64,11 @@ public class GameControl {
 
     
     }
+
+    public static Actor[] createActors() {
+
+    
+}
 
     public static WeatherEvent createWeatherChoice(String weatherChoice) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
