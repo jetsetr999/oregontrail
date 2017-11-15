@@ -6,7 +6,6 @@
 package oregontrail.control;
 
 import firstpackagejpp.Player;
-import firstpackagejpp.WeatherEvent;
 import oregontrail1.OregonTrail1;
 
 /**
@@ -33,14 +32,6 @@ public class GameControl {
         
         if (player == null) {
             return -1;
-        } 
-    /**
-     * create game number for index purpose
-     */
-    public static CurrentGame createCurrentGame( int currentGame ){
-        
-        if (currentGame == null) {
-            return null;         
         }       
         
         Game game = new Game();
@@ -70,7 +61,4 @@ public class GameControl {
     
 }
 
-    public static WeatherEvent createWeatherChoice(String weatherChoice) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+
