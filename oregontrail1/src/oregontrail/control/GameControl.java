@@ -5,6 +5,8 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.InventoryItem;
+import firstpackagejpp.Map;
 import firstpackagejpp.Player;
 import oregontrail1.Game;
 import oregontrail1.OregonTrail1;
@@ -14,25 +16,6 @@ import oregontrail1.OregonTrail1;
  * @author Kyle Jones
  */
 public class GameControl {
-
-    public static int createNewGame(Player player) {
-
-       // create a new game
-        int returnValue = GameControl.createNewGame(OregonTrail1.getPlayer());
-        if (returnValue < 0){
-            System.out.println("Error - Failed to create new game");
-        }
-        
-        if (player == null) {
-            return -1;
-        }
-
-        Game game = new Game();
-        
-        
-    
-        //    MainMenuView mainMenuView = new MainMenuView();
-        //  mainMenuView.display();
 
     public static Player createPlayer(String name) {
 
@@ -46,35 +29,51 @@ public class GameControl {
         OregonTrail1.setPlayer(player);
 
         return player;
-    }
-
-    game.setPlayer (player);
-
-    OregonTrail1.currentGame (game);
-   
-}
-/* public static int createNewGame(Player player) {  
-if (player == null)  
- return -1 
-game = create a new Game object 
-Save a reference to the Player object in the game 
-Save a reference to the game in the main class
-actors = createActors() 
-Save the list of actors in the Game object 
-Assign an actor to the player 
-items = createItems() 
-Save the list of items in the game 
-map = createMap(noOfRows, noOfColumns) 
-IF map == null THEN    
-RETURN -1 
-ENDIF 
-Assign the map to the game 
-RETURN 1 // indicates success } */
-
-
-}
-
-    public static Actor[] createActors() {
-
     
 }
+    
+    public static int createNewGame(Player player) {
+        if (player == null) {
+            return -1;
+        }
+
+       Game game = new Game();       // create a new game object
+       game.setPlayer(player);       // Save a reference to the player object in the game 
+       OregonTrail1.setCurrentGame(game);        // save a reference to the game in the main class
+
+       // Actors[] actors = ActorControl.createActors();        // create actors
+       // game.setActors(game);        // save the list of actors in the game object
+
+       
+       InventoryItem[] items = GameControl.createItems();
+       game.setInventory(items);
+       
+       int noOfColumns = 10;
+       int noOfRows = 10;
+       Map map = MapControl.createMap(noOfColumns, noOfRows);
+       game.setMap(map);
+       
+       if (map == null) {
+           return -1;
+       }
+       else {
+           game.setMap(map);
+           return 1;
+       }
+    }
+    
+    public static InventoryItem[] createItems() {
+        System.out.println("\n*** create items stub function called ***");     
+        return null;
+    }
+    
+    public static Map createMap(int noOfRows, int noOfColumns) {
+        System.out.println("\n*** create map stub function called ***");         
+        return null;
+    }
+
+    
+    
+}
+
+    
