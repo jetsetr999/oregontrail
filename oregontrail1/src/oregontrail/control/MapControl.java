@@ -5,10 +5,17 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.Map;
+
 /**
  *
  * @author Kyle Jones
  */
 public class MapControl {
+
+    static Map createMap(int noOfColumns, int noOfRows) {
+        System.out.println("\n*** save game ***");
+        return null;
+    }
     
 }
