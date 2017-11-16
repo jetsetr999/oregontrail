@@ -8,6 +8,7 @@ package oregontrail.control;
 import firstpackagejpp.InventoryItem;
 import firstpackagejpp.Map;
 import firstpackagejpp.Player;
+import firstpackagejpp.WeatherEvent;
 import oregontrail1.Game;
 import oregontrail1.OregonTrail1;
 
@@ -70,6 +71,11 @@ public class GameControl {
     public static Map createMap(int noOfRows, int noOfColumns) {
         System.out.println("\n*** create map stub function called ***");         
         return null;
+    }
+
+    public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        System.out.println("\n*** weather event ***");
+        return null; 
     }
 
     
