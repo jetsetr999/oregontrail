@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package oregontrail1;
+
 import firstpackagejpp.Game;
 import firstpackagejpp.Actor;
 import firstpackagejpp.AttackEvent;
@@ -20,21 +21,22 @@ import firstpackagejpp.TownScene;
 import firstpackagejpp.RiverCrossingScene;
 import firstpackagejpp.TrailStopScene;
 import oregoncontrol.View.StartProgramView;
+
 /**
  *
  * @author parhe
  */
 public class OregonTrail1 {
-    
+
     private static Game currentGame = null;
     private static Player player = null;
+    private static Map map = null;
 
-    public static void main(String[] args) 
-    {
-        
+    public static void main(String[] args) {
+
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
-            
+
     }
 
     public static Game getCurrentGame() {
@@ -52,6 +54,9 @@ public class OregonTrail1 {
     public static void setPlayer(Player player) {
         OregonTrail1.player = player;
     }
-    
-    
+
+    public static Map getMap() {
+        return map;
+    }
+
 }

@@ -43,14 +43,11 @@ public class GameControl implements Serializable {
         if (player == null) {
             return -1;
         }
-
+        Map map = new Map();
         Game game = new Game();
         return 0;
     }
 
-    //private void createItems(){
-    //   System.out.println("\n*** Create Items method called ***");
-    //   }
     public static InventoryItem[] createItems() {
         InventoryItem[] InventoryItem = null;
         return InventoryItem;
@@ -60,6 +57,8 @@ public class GameControl implements Serializable {
         System.out.println("\n*** create map stub function called ***");
         return null;
     }
+
+    
 }
 
 //    MainMenuView mainMenuView = new MainMenuView();
@@ -136,4 +135,4 @@ RETURN 1 // indicates success } */
         System.out.println("\n*** create items stub function called ***");     
         return null;
     }
-        */
+ */

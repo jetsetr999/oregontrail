@@ -13,18 +13,17 @@ import firstpackagejpp.Map;
  */
 public class MapControl {
 
-    static Map createMap(int noOfColumns, int noOfRows) {
-        System.out.println("\n*** save game ***");
+    /*static Map createMap(int noOfColumns, int noOfRows) {
+        System.out.println("\n*** create map ***");
         return null;
     }
-    
-    //private void displayCreateMap() {
-    //    System.out.println("\n*** Create map stub function called ***");
-        //return map;
-        
+
+    /*private void displayCreateMap() {
+        System.out.println("\n*** Create map stub function called ***");
+    }
+}*/
+    public static Map createMap(int noOfRows, int noOfColumns){
+       Map map = null;
+      return map; 
+    }
 }
-   // public static Map createMap(int noOfRows, int noOfColumns){
-     //   Map map = null;
-     //  return map; 
-    //}
-//}
