@@ -65,7 +65,8 @@ public class MainMenuView extends View {
     // calls the new game
     private void startNewGame() {
         GameControl.createNewGame(OregonTrail1.getPlayer());
-        MapControl.createMap(GameControl.getMap());
+        MapControl.createMap(OregonTrail1.getMap());
+        InventoryItem.
 
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
