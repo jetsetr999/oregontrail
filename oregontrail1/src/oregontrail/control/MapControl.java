@@ -5,10 +5,21 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.Map;
+
 /**
  *
  * @author Kyle Jones
  */
 public class MapControl {
     
+    private void displayCreateMap() {
+        System.out.println("\n*** Create map stub function called ***");
+        //return map;
+        
+}
+    public static Map createMap(int noOfRows, int noOfColumns){
+        Map map = null;
+       return map; 
+    }
 }

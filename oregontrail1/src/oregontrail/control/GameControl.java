@@ -5,7 +5,10 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.InventoryItem;
 import firstpackagejpp.Player;
+import firstpackagejpp.WeatherEvent;
+import java.io.Serializable;
 import oregontrail1.Game;
 import oregontrail1.OregonTrail1;
 
@@ -13,7 +16,27 @@ import oregontrail1.OregonTrail1;
  *
  * @author Kyle Jones
  */
-public class GameControl {
+public class GameControl implements Serializable{
+
+    public static Player createPlayer(String playersName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    private double totalTime;
+    
+    private Player player;
+    
+    public Player getPlayer(){
+        return player;
+    }
+    
+    //save player in the game
+    public void setPlayer(Player player){
+        this.player = player;
+    }
 
     public static int createNewGame(Player player) {
 
@@ -28,13 +51,24 @@ public class GameControl {
         }
 
         Game game = new Game();
-        
-        
+        return 0;
+    }  
+    
+    //private void createItems(){
+     //   System.out.println("\n*** Create Items method called ***");
+     //   }
+    
+    public static InventoryItem[] createItems(){
+        InventoryItem[] InventoryItem = null;
+        return InventoryItem;
+    }
+    
+}    
     
         //    MainMenuView mainMenuView = new MainMenuView();
         //  mainMenuView.display();
 
-    public static Player createPlayer(String name) {
+    /*public static Player createPlayer(String name) {
 
         if (name == null) {
             return null;
@@ -52,7 +86,7 @@ public class GameControl {
 
     OregonTrail1.currentGame (game);
    
-}
+}*/
 /* public static int createNewGame(Player player) {  
 if (player == null)  
  return -1 
@@ -72,9 +106,9 @@ Assign the map to the game
 RETURN 1 // indicates success } */
 
 
-}
 
-    public static Actor[] createActors() {
+
+  /*  public static Actor[] createActors() {*/
 
     
-}
+
