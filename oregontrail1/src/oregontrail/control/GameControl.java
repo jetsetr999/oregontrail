@@ -53,12 +53,6 @@ public class GameControl implements Serializable {
         return InventoryItem;
     }
 
-    public static Map createMap(int noOfRows, int noOfColumns) {
-        System.out.println("\n*** create map stub function called ***");
-        return null;
-    }
-
-    
 }
 
 //    MainMenuView mainMenuView = new MainMenuView();
