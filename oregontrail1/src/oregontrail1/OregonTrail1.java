@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package oregontrail1;
+import firstpackagejpp.Game;
 import firstpackagejpp.Actor;
 import firstpackagejpp.AttackEvent;
 import firstpackagejpp.Event;

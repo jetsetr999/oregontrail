@@ -11,4 +11,5 @@ package oregontrail.control;
  */
 public class ActorControl {
     
+    
 }

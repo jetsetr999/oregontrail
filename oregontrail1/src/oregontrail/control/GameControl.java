@@ -9,66 +9,57 @@ import firstpackagejpp.InventoryItem;
 import firstpackagejpp.Player;
 import firstpackagejpp.WeatherEvent;
 import java.io.Serializable;
-import oregontrail1.Game;
+import firstpackagejpp.Game;
 import oregontrail1.OregonTrail1;
 
 /**
  *
  * @author Kyle Jones
  */
-public class GameControl implements Serializable{
+public class GameControl implements Serializable {
 
     public static Player createPlayer(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+   Player player = new Player();
+   player.setName(playersName);
+   return player;
+   }
+
+public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        System.out.println("weather stub");
+        return null;
     }
 
-    public static WeatherEvent createWeatherChoice(String weatherChoice) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    private double totalTime;
-    
-    private Player player;
-    
-    public Player getPlayer(){
-        return player;
-    }
-    
-    //save player in the game
-    public void setPlayer(Player player){
-        this.player = player;
-    }
+//save player in the game
+public static int createNewGame(Player player) {
 
-    public static int createNewGame(Player player) {
-
-       // create a new game
+        // create a new game
         int returnValue = GameControl.createNewGame(OregonTrail1.getPlayer());
-        if (returnValue < 0){
+        if (returnValue < 0) {
             System.out.println("Error - Failed to create new game");
         }
-        
+
         if (player == null) {
             return -1;
         }
 
         Game game = new Game();
         return 0;
-    }  
-    
+    }
+
     //private void createItems(){
-     //   System.out.println("\n*** Create Items method called ***");
-     //   }
-    
-    public static InventoryItem[] createItems(){
+    //   System.out.println("\n*** Create Items method called ***");
+    //   }
+    public static InventoryItem[] createItems() {
         InventoryItem[] InventoryItem = null;
         return InventoryItem;
     }
-    
-}    
-    
-        //    MainMenuView mainMenuView = new MainMenuView();
-        //  mainMenuView.display();
 
-    /*public static Player createPlayer(String name) {
+}
+
+//    MainMenuView mainMenuView = new MainMenuView();
+//  mainMenuView.display();
+/*public static Player createPlayer(String name) {
 
         if (name == null) {
             return null;
@@ -80,6 +71,7 @@ public class GameControl implements Serializable{
         OregonTrail1.setPlayer(player);
 
         return player;
+<<<<<<< HEAD
     }
 
     game.setPlayer (player);
@@ -87,7 +79,7 @@ public class GameControl implements Serializable{
     OregonTrail1.currentGame (game);
    
 }*/
-/* public static int createNewGame(Player player) {  
+ /* public static int createNewGame(Player player) {  
 if (player == null)  
  return -1 
 game = create a new Game object 
@@ -104,11 +96,47 @@ RETURN -1
 ENDIF 
 Assign the map to the game 
 RETURN 1 // indicates success } */
+ /*  public static Actor[] createActors() {*/
+/*public static int createNewGame(Player player) {
+        if (player == null) {
+            return -1;
+        }
 
+       Game game = new Game();       // create a new game object
+       game.setPlayer(player);       // Save a reference to the player object in the game 
+       OregonTrail1.setCurrentGame(game);        // save a reference to the game in the main class
 
+       // Actors[] actors = ActorControl.createActors();        // create actors
+       // game.setActors(game);        // save the list of actors in the game object
 
-
-  /*  public static Actor[] createActors() {*/
-
+       
+       InventoryItem[] items = GameControl.createItems();
+       game.setInventory(items);
+       
+       int noOfColumns = 10;
+       int noOfRows = 10;
+       Map map = MapControl.createMap(noOfColumns, noOfRows);
+       game.setMap(map);
+       
+       if (map == null) {
+           return -1;
+       }
+       else {
+           game.setMap(map);
+           return 1;
+       }
+    }
     
+    public static InventoryItem[] createItems() {
+        System.out.println("\n*** create items stub function called ***");     
+        return null;
+    }
+    
+    public static Map createMap(int noOfRows, int noOfColumns) {
+        System.out.println("\n*** create map stub function called ***");         
+        return null;
+    }
 
+    public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        System.out.println("\n*** weather event ***");
+        return null;*/

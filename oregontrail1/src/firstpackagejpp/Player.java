@@ -6,7 +6,6 @@
 package firstpackagejpp;
 import java.io.Serializable;
 import java.util.ArrayList;
-import oregontrail1.Game;
         
         
 /**
