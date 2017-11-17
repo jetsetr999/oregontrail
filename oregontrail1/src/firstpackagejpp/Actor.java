@@ -13,8 +13,8 @@ import java.io.Serializable;
  */
 public enum Actor implements Serializable
 {
-    Father("Lehi", "He is the prophet and leader of the family.", new Point(1, 1)),
-    Mother("Sariah", "She is Lehi's wife and mother of the family.", new Point(0, 1)),
+    Banker("Banker", "He is in charge of money distribution", new Point(1, 1)),
+    StoreKeeper("Store Keeper", "He will help with supplies.", new Point(0, 1)),
     Nephi("Nephi", "Faithful son and later the prophet leader of the Nephites.", new Point(1, 2)),
     Jacob("Jacob", "Nephi's faithful brother, prophet and successor to Nephi", new Point(2, 3)),
     Sam("Sam", "The youngest boy and faithful brother of Nephi.", new Point(1, 2)),
