@@ -5,6 +5,7 @@
  */
 package oregoncontrol.View;
 
+import firstpackagejpp.InventoryItem;
 import java.util.Scanner;
 import oregontrail.control.GameControl;
 import oregontrail.control.MapControl;
@@ -64,9 +65,9 @@ public class MainMenuView extends View {
 
     // calls the new game
     private void startNewGame() {
-        GameControl.createNewGame(OregonTrail1.getPlayer());
-        MapControl.createMap(OregonTrail1.getMap());
-        InventoryItem.
+        GameControl.createNewGame(OregonTrail1.getGame());
+        //MapControl.createMap(OregonTrail1.getMap());
+        //InventoryItem.createItem(OregonTrail1.getItem());
 
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();

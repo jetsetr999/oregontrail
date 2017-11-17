@@ -21,6 +21,7 @@ import firstpackagejpp.TownScene;
 import firstpackagejpp.RiverCrossingScene;
 import firstpackagejpp.TrailStopScene;
 import oregoncontrol.View.StartProgramView;
+import oregontrail1.OregonTrail1.game;
 
 /**
  *
@@ -58,5 +59,30 @@ public class OregonTrail1 {
     public static Map getMap() {
         return map;
     }
+    public static InventoryItem getItem(InventoryItem item){
+        return item;
+    }
 
+    public static Game getGame() {
+        System.out.println(" get game stub ");
+        return null;
+    }
+   public static class setPlayer {
+
+        public setPlayer() {
+        }
+    }
+
+    public static class game {
+
+        public game() {
+        }
+    }
+
+    public static class getGame {
+
+        public getGame() {
+        }
+    }
+    
 }
