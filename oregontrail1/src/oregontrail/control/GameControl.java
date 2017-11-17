@@ -10,6 +10,7 @@ import firstpackagejpp.Player;
 import firstpackagejpp.WeatherEvent;
 import java.io.Serializable;
 import firstpackagejpp.Game;
+import firstpackagejpp.Map;
 import oregontrail1.OregonTrail1;
 
 /**
@@ -19,19 +20,19 @@ import oregontrail1.OregonTrail1;
 public class GameControl implements Serializable {
 
     public static Player createPlayer(String playersName) {
-    
-   Player player = new Player();
-   player.setName(playersName);
-   return player;
-   }
 
-public static WeatherEvent createWeatherChoice(String weatherChoice) {
+        Player player = new Player();
+        player.setName(playersName);
+        return player;
+    }
+
+    public static WeatherEvent createWeatherChoice(String weatherChoice) {
         System.out.println("weather stub");
         return null;
     }
 
 //save player in the game
-public static int createNewGame(Player player) {
+    public static int createNewGame(Player player) {
 
         // create a new game
         int returnValue = GameControl.createNewGame(OregonTrail1.getPlayer());
@@ -55,6 +56,10 @@ public static int createNewGame(Player player) {
         return InventoryItem;
     }
 
+    public static Map createMap(int noOfRows, int noOfColumns) {
+        System.out.println("\n*** create map stub function called ***");
+        return null;
+    }
 }
 
 //    MainMenuView mainMenuView = new MainMenuView();
@@ -97,7 +102,7 @@ ENDIF
 Assign the map to the game 
 RETURN 1 // indicates success } */
  /*  public static Actor[] createActors() {*/
-/*public static int createNewGame(Player player) {
+ /*public static int createNewGame(Player player) {
         if (player == null) {
             return -1;
         }
@@ -131,12 +136,4 @@ RETURN 1 // indicates success } */
         System.out.println("\n*** create items stub function called ***");     
         return null;
     }
-    
-    public static Map createMap(int noOfRows, int noOfColumns) {
-        System.out.println("\n*** create map stub function called ***");         
-        return null;
-    }
-
-    public static WeatherEvent createWeatherChoice(String weatherChoice) {
-        System.out.println("\n*** weather event ***");
-        return null;*/
+        */
