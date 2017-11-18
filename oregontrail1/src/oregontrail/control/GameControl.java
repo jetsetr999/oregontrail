@@ -5,12 +5,14 @@
  */
 package oregontrail.control;
 
+import firstpackagejpp.Actor;
 import firstpackagejpp.InventoryItem;
 import firstpackagejpp.Player;
 import firstpackagejpp.WeatherEvent;
 import java.io.Serializable;
 import firstpackagejpp.Game;
 import firstpackagejpp.Map;
+import java.util.ArrayList;
 import oregontrail1.OregonTrail1;
 
 /**
@@ -54,16 +56,24 @@ public class GameControl implements Serializable {
         System.out.println(" game stub ");
         return null;
     }
+    // actors = createActors()
+    public static Actor createActor(Actor person) {
+        return person;
+    }
+    public ArrayList<Actor> addActor(){
+        
+    // create ArrayList for Actors
+    ArrayList<Actor> hero = new ArrayList<>();
+    return hero;
+    
+    }
+    // Save the list of actors in the Game object
+    
+}
+/*
 
-}/*
-public static int createNewGame(Player player) {
-if (player == null)
-return -1
-game = create a new Game object
-Save a reference to the Player object in the game
-Save a reference to the game in the main class
-actors = createActors()
-Save the list of actors in the Game object
+
+
 Assign an actor to the player
 items = createItems()
 Save the list of items in the game
