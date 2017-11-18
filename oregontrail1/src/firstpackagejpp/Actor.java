@@ -19,19 +19,19 @@ public enum Actor implements Serializable
     Doctor("Doctor", "He has a higher chance of healing members of the party", new Point(2, 3)),
     Farmer("Farmer", "Higher chance of finding and gathering food.", new Point(1, 2)),;
     
-    private final String name;
+    private final String person;
     private final String description;
     private final Point coordinates;
     
     Actor(String name, String description, Point coordinates)
     {
-        this.name = name;
+        this.person = name;
         this.description = description;
         this.coordinates = coordinates;
     }
 
     public String getName() {
-        return name;
+        return person;
     }
 
     public String getDescription() {
@@ -44,7 +44,7 @@ public enum Actor implements Serializable
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", description=" + description 
+        return "Actor{" + "name=" + person + ", description=" + description 
                 + ", coordinates=" + coordinates + '}';
     }
     
