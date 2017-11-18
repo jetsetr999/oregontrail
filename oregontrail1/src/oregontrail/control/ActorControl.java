@@ -11,12 +11,12 @@ package oregontrail.control;
  */
 public class ActorControl {
 
-    public static void getHero(String hero) {
-        System.out.println("\n getHero stub");
+    public static void getActor(String hero) {
+        
     }
 
-    public static String getHero() {
-         System.out.println("\n getHero stub");
+    public static String getActor() {
+         System.out.println("\n getActor stub");
         return null;
          
     }

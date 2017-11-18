@@ -31,5 +31,14 @@ public class InventoryControl
         double subTotal = itemQuantity * pricePerUnit;
         return subTotal;
     }
+    public static void getItem(String item) {
+        
+    }
+
+    public static String getItem() {
+         System.out.println("\n getItem stub");
+        return null;
+         
+    }
      
 }

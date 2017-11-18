@@ -9,6 +9,7 @@ import firstpackagejpp.InventoryItem;
 import java.util.Scanner;
 import oregontrail.control.ActorControl;
 import oregontrail.control.GameControl;
+import oregontrail.control.InventoryControl;
 import oregontrail.control.MapControl;
 import oregontrail1.OregonTrail1;
 
@@ -71,8 +72,9 @@ public class MainMenuView extends View {
         //map
         //MapControl.createMap(OregonTrail1.getMap());
         //actors
-        ActorControl.getHero(ActorControl.getHero());
+        ActorControl.getActor(ActorControl.getActor());
         //inventory 
+        InventoryControl.getItem(InventoryControl.getItem());
         //location 
         //scene 
         //question
