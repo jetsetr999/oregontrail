@@ -152,8 +152,6 @@ if (player == null)
         System.out.println("\n*** create items stub function called ***");     
         return null;
     }
+    */
 
-    public static Scene[] createScenes() { 
 
-    }
-     */
