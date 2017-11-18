@@ -22,7 +22,7 @@ import oregontrail1.OregonTrail1;
 public class GameControl implements Serializable {
 
     public static Player createPlayer(String playersName) {
-        
+
         if (playersName == null) {
             return null;
         }
@@ -56,25 +56,39 @@ public class GameControl implements Serializable {
         System.out.println(" game stub ");
         return null;
     }
+
     // actors = createActors()
-    public static Actor createActor(Actor person) {
-        return person;
+    public static Actor createActor(Actor hero) {
+        return hero;
     }
-    public ArrayList<Actor> addActor(){
+
+    public ArrayList<Actor> addActor() {
+
+        // create ArrayList for Actors
+        ArrayList<Actor> hero = new ArrayList<>();
         
-    // create ArrayList for Actors
-    ArrayList<Actor> hero = new ArrayList<>();
-    return hero;
-    
+        return hero;
+
     }
     // Save the list of actors in the Game object
+    public void Actor(ArrayList<Actor> actorHero){
+        // create list of actors
+        for(int i=0; i< actorHero.size(); i++){
+        
+            Actor hero = actorHero.get(i);
+            System.out.println("\n\t Actor: " + hero.getHero() +
+                               "\n\t Quantity: "+ hero.getQantityOnHand());
+        }
+        
+    }
+    // Assign an actor to the player
     
 }
 /*
 
 
 
-Assign an actor to the player
+
 items = createItems()
 Save the list of items in the game
 map = createMap(noOfRows, noOfColumns)
