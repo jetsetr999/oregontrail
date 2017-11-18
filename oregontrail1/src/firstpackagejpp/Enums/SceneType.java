@@ -12,6 +12,8 @@ import java.io.Serializable;
  */
 public enum SceneType implements Serializable {
     
+        Start,
+        Independence,
         Fort,
         Hotel,
         Regular,
@@ -19,7 +21,6 @@ public enum SceneType implements Serializable {
         RiverCrossing,
         Town,
         TrailStop,
-        Independence,
         Landmark,
         Mountain,
         Shop,
@@ -28,6 +29,7 @@ public enum SceneType implements Serializable {
         Death,
         Supplies,
         Questions, 
+        End,
 
 } 
 
