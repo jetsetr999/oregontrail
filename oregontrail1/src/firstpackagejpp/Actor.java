@@ -15,12 +15,9 @@ public enum Actor implements Serializable
 {
     Banker("Banker", "He is in charge of money distribution", new Point(1, 1)),
     StoreKeeper("Store Keeper", "He will help with supplies.", new Point(0, 1)),
-    Nephi("Nephi", "Faithful son and later the prophet leader of the Nephites.", new Point(1, 2)),
-    Jacob("Jacob", "Nephi's faithful brother, prophet and successor to Nephi", new Point(2, 3)),
-    Sam("Sam", "The youngest boy and faithful brother of Nephi.", new Point(1, 2)),
-    Laman("Laman", "The oldest rebellious brother and leader of the Lamanites.", new Point(1, 1)),
-    Lemuel("Lemuel", "The 2nd oldest rebellious brother who went with Laman.", new Point(3, 4)),
-    Zoram("Zoram", "Laban servant that became a faithful follower of Nephi.", new Point(5, 2));
+    Carpenter("Carpenter", "He has a higher change of reparing the wagon.", new Point(1, 2)),
+    Doctor("Doctor", "He has a higher chance of healing members of the party", new Point(2, 3)),
+    Farmer("Farmer", "Higher chance of finding and gathering food.", new Point(1, 2)),;
     
     private final String name;
     private final String description;
