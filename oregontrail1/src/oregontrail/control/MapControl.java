@@ -7,7 +7,8 @@ package oregontrail.control;
 
 import firstpackagejpp.Map;
 import javafx.scene.Scene;
-import firstpackagejpp.Enums;
+import firstpackagejpp.Enums.SceneType; 
+
 
 /**
  *
@@ -33,20 +34,7 @@ public class MapControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public static Scene[] createScenes() {
-        
-        Scene[] scene = new Scene[16];
-
-        Scene1 start = new Scene();
-        fort.setDescription("Starting Scene");
-        fort.setLocation(0);
-        scene[SceneType.start.ordinal()] = start;
-        
-        Scene2 independence = new Scene();
-        fort.setDescription("Independence Missouri");
-        fort.setLocation(1);
-        scenes[SceneType.independence.ordinal()] = independence;
-
-        return scene; 
+    public static Scene[] createScenes(Scene[] Scene) {
+        return Scene;    
     }
 }
