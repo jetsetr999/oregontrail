@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package oregontrail.control;
+
+import firstpackagejpp.InventoryItem;
+
 /**
  *
  * @author Kyle Jones
@@ -11,6 +14,10 @@ package oregontrail.control;
  */
 public class InventoryControl
 {
+
+    static InventoryItem[] createItems() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public double getSubTotal(double pricePerUnit , double itemQuantity)
                              
     {
