@@ -27,6 +27,7 @@ public enum SceneType implements Serializable {
         Wagon,
         Death,
         Supplies,
+        Questions, 
 
 } 
 
