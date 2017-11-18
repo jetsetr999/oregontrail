@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package firstpackagejpp;
+
 import java.awt.Point;
 import java.io.Serializable;
 
@@ -11,20 +12,18 @@ import java.io.Serializable;
  *
  * @author Kyle Jones
  */
-public enum Actor implements Serializable
-{
+public enum Actor implements Serializable {
     Banker("Banker", "He is in charge of money distribution", new Point(1, 1)),
     StoreKeeper("Store Keeper", "He will help with supplies.", new Point(0, 1)),
     Carpenter("Carpenter", "He has a higher change of reparing the wagon.", new Point(1, 2)),
     Doctor("Doctor", "He has a higher chance of healing members of the party", new Point(2, 3)),
     Farmer("Farmer", "Higher chance of finding and gathering food.", new Point(1, 2)),;
-    
+
     private final String hero;
     private final String description;
     private final Point coordinates;
-    
-    Actor(String name, String description, Point coordinates)
-    {
+
+    Actor(String name, String description, Point coordinates) {
         this.hero = name;
         this.description = description;
         this.coordinates = coordinates;
@@ -42,11 +41,20 @@ public enum Actor implements Serializable
         return coordinates;
     }
 
+    public String getHero() {
+        System.out.println("\n getHero stub");
+        return null;
+    }
+
+    public String getQantityOnHand() {
+        System.out.println("\n quantity on hand stub");
+        return null;
+    }
+
     @Override
     public String toString() {
-        return "Actor{" + "name=" + hero + ", description=" + description 
+        return "Actor{" + "name=" + hero + ", description=" + description
                 + ", coordinates=" + coordinates + '}';
     }
-    
-    
+
 }
