@@ -6,6 +6,7 @@
 package oregontrail.control;
 
 import firstpackagejpp.Map;
+import javafx.scene.Scene;
 
 /**
  *
@@ -29,5 +30,17 @@ public class MapControl {
 
     public static void createMap(Map map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public static void createScenes() {
+        
+        Scene[] scene = new Scene[16];
+
+        Scene1 independence = new Scene();
+        fort.setDescription("Independence Missouri")
+        fort.setLocation(0);
+        scene[SceneType.independence.ordinal()] = independence;
+
+        return Scene; 
     }
 }
