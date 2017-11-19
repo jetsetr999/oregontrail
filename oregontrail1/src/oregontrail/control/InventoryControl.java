@@ -14,10 +14,6 @@ import firstpackagejpp.InventoryItem;
  */
 public class InventoryControl
 {
-
-    static InventoryItem[] createItems() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     public double getSubTotal(double pricePerUnit , double itemQuantity)
                              
     {

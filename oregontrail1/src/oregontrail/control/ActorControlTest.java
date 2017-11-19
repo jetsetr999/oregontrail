@@ -10,5 +10,9 @@ package oregontrail.control;
  * @author Darrin
  */
 public class ActorControlTest {
+
+    public void display() {
+        System.out.println("Actor ControlTest stub 108823");
+    }
     
 }

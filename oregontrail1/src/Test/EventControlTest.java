@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oregontrail.control;
+package Test;
 
+import oregontrail.control.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -124,5 +125,9 @@ public class EventControlTest {
         double result = instance.teamStatus(health, rations, rest, joy);
         assertEquals(expResult, result, 0.0);
 
+    }
+
+    private void assertEquals(double expResult, double result, double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

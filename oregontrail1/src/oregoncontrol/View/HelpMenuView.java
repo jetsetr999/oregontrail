@@ -6,7 +6,7 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
-import oregontrail.control.ActorControlTest;
+package Test Packages
 
 /**
  *
@@ -86,11 +86,13 @@ public class HelpMenuView extends View {
     }
 
     void displayHelpMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(" help menu view stub");
     }
 
     private void ActorControlTest() {
-        System.out.println(" ActorControlTest Stub");
+        ActorControlTest actorControlTest = new ActorControlTest();
+        actorControlTest.display();
+        System.out.println(" ActorControlTest Stub 111");
 
     }
 
@@ -102,7 +104,7 @@ public class HelpMenuView extends View {
         }
 
         private static ActorControlTest ActorControlTest() {
-            System.out.println(" ActorControlTest Stub");
+            System.out.println(" ActorControlTest Stub 2");
             return null;
         }
 
