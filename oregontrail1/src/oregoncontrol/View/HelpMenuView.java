@@ -6,6 +6,7 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
+import oregontrail.control.ActorControlTest;
 
 /**
  *
@@ -22,6 +23,7 @@ public class HelpMenuView extends View {
                 + "\n\t M - Learn How to move"
                 + "\n\t A - Game assists or Helpful hints"
                 + "\n\t D - Gsme definitions"
+                + "\n\t T - Call the Actor Test"
                 + "\n\t R - Return to previous menu"
                 + "\n\t ---------------------------------");
 
@@ -45,6 +47,9 @@ public class HelpMenuView extends View {
             case "D":
                 this.displayDefinitions();
                 break;
+            case "T":
+                this.ActorControlTest(); // Actor sort test
+                break;    
             case "R":
                 this.returnToMainMenu();
                 break;
@@ -84,5 +89,22 @@ public class HelpMenuView extends View {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
+    private void ActorControlTest() {
+        System.out.println(" ActorControlTest Stub");
+
+    }
+
+    private static class actorControlTest {
+
+        private static void display() {
+            ActorControlTest actorTest = ActorControlTest();
+            actorControlTest.display();
+        }
+
+        private static ActorControlTest ActorControlTest() {
+            System.out.println(" ActorControlTest Stub");
+            return null;
+        }
+
+    }
 }
