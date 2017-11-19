@@ -12,6 +12,7 @@ import oregontrail.control.GameControl;
 import oregontrail.control.InventoryControl;
 import oregontrail.control.MapControl;
 import oregontrail1.OregonTrail1;
+import oregontrail.control.ActorControlTest;
 
 /**
  *
@@ -57,6 +58,9 @@ public class MainMenuView extends View {
                 break;
             case "S":
                 this.saveGame(); // Save Game
+                break;
+            case "T":
+                this.ActorControlTest(); // Actor sort test
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -111,5 +115,13 @@ public class MainMenuView extends View {
     private void saveGame() {
         System.out.println("\n*** save game ***");
         
+    }
+
+    private void ActorControlTest() {
+        ActorControlTest actorTest = ActorControlTest();
+        actorControlTest.display();
+    }
+
+    
     }
 }
