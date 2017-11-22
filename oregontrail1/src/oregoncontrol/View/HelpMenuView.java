@@ -6,7 +6,7 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
-package Test Packages
+ Test_Packages
 
 /**
  *
