@@ -6,23 +6,26 @@
 package oregontrail.control;
 
 import firstpackagejpp.InventoryItem;
+import oregontrail.exceptions.InventoryControlException; 
 
 /**
  *
  * @author Kyle Jones
  * This is being added JUST so I can push this version
  */
-public class InventoryControl
+public class InventoryControl 
 {
-    public double getSubTotal(double pricePerUnit , double itemQuantity)
+    public double getSubTotal(double pricePerUnit , double itemQuantity) throws InventoryControlException
                              
     {
         
         if (pricePerUnit < 0 || itemQuantity <= 0 || itemQuantity > 300 || pricePerUnit > 300)
         {
-            System.out.println("\nthe weight and amount must be greater than 0 "
-            + "and the weight and amount must be less than or equal to 300.");
-            return -1;
+            /*System.out.println("\nthe weight and amount must be greater than 0 "
+            + "and the weight and amount must be less than or equal to 300.");*/
+            throw new InventoryControlException(" the weight and amount must be greater than 0"
+                                              + "and the weight and amount must be less than or equal to 300."); 
+                                             
         }
         double subTotal = itemQuantity * pricePerUnit;
         return subTotal;
