@@ -38,3 +38,6 @@ public class MapControl {
         return Scene;    
     }
 }
+
+// Scene[] scene = new Scene[];
+
