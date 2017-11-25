@@ -5,6 +5,7 @@
  */
 package oregontrail.control;
 
+import oregontrail.exceptions.InventoryControlException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,7 +23,7 @@ public class InventoryControlTest {
      * Test 1
      */
     @Test
-    public void test1GetSubTotal() {
+    public void test1GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 1");
         double pricePerUnit = 2;

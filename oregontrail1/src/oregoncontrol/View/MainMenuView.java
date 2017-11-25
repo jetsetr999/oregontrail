@@ -69,7 +69,7 @@ public class MainMenuView extends View {
         //new game 
         GameControl.createNewGame(OregonTrail1.getGame());
         //map
-        //MapControl.createMap(OregonTrail1.getMap());
+        MapControl.createMap(OregonTrail1.getMap());
         //actors
         ActorControl.getActor(ActorControl.getActor());
         //inventory 

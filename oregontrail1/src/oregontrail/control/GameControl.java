@@ -61,7 +61,13 @@ public class GameControl implements Serializable {
     public static Actor createActor(Actor hero) {
         return hero;
     }
-
+    
+    // Item array created
+    public static InventoryItem[] createItems(){
+        System.out.println(" Item Array stub in Game Control");
+        return null;
+        
+    }
     public ArrayList<Actor> addActor() {
 
         // create ArrayList for Actors
@@ -81,8 +87,7 @@ public class GameControl implements Serializable {
         }
         
     }
-    // Assign an actor to the player
-    
+      
 }
 /*
 

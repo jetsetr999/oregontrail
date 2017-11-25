@@ -26,7 +26,7 @@ public class Game {
     }
 
     public void setMap(Map map) {
-        System.out.println("\n*** set map ***");
+        System.out.println("\n*** createMap called ***");
     }
 
     public Player getPlayer() {
