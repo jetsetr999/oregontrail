@@ -12,7 +12,7 @@ package oregoncontrol.View;
 public class MenuView {
 
     void displayMenu() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t------------------------------"
                 + "\n\t| Main Menu                  |"
                 + "\n\t------------------------------"
@@ -27,7 +27,7 @@ public class MenuView {
     }
 
     void displayMapMenu() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ---------------------------------"
                 + "\n\t | Map Menu                     |"
                 + "\n\t ---------------------------------"
@@ -41,7 +41,7 @@ public class MenuView {
     }
 
     void displayHelpMenu() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ---------------------------------"
                 + "\n\t | Help Menu                     |"
                 + "\n\t ---------------------------------"
@@ -55,7 +55,7 @@ public class MenuView {
     }
 
     void displayInventoryMenuView() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ------------------------------"
                 + "\n\t | Inventory Menu             |"
                 + "\n\t ------------------------------"
@@ -69,7 +69,7 @@ public class MenuView {
     }
 
     void displayTeamPaceBanner() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ---------------------------------"
                 + "\n\t | Team Pace Menu                |"
                 + "\n\t ---------------------------------"
@@ -85,7 +85,7 @@ public class MenuView {
     }
 
     void displayTeamStatusView() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ------------------------------"
                 + "\n\t | Team Status                |"
                 + "\n\t ------------------------------"
@@ -99,7 +99,7 @@ public class MenuView {
     }
 
     void displayGameMenuBanner() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n\t ***************************************************"
                 + "\n\t |Current State Information:                       |"
                 + "\n\t Today is (place current date and time here)        "

@@ -60,34 +60,35 @@ public class DailyTrailStopSceneView extends View {
                 this.returntoGameMenuView(); // Save Game
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
         return false;
     }
 
     private void visitTown() {
-        System.out.println("\n*** visit town stub function called ***");
+        this.console.println("\n*** visit town stub function called ***");
     }
 
     private void visitFort() {
-        System.out.println("\n*** visit fort stub function called ***");
+        this.console.println("\n*** visit fort stub function called ***");
     }
 
     private void crossRiver() {
-        System.out.println("\n*** cross river stub function called ***");
+        this.console.println("\n*** cross river stub function called ***");
     }
 
     private void restTime() {
-        System.out.println("\n*** rest for a day stub function called ***");
+        this.console.println("\n*** rest for a day stub function called ***");
     }
 
     private void goHunting() {
-        System.out.println("\n*** go hunting stub function called ***");
+        this.console.println("\n*** go hunting stub function called ***");
     }
 
     private void lookForPlants() {
-        System.out.println("\n*** look for plants stub function called ***");
+        this.console.println("\n*** look for plants stub function called ***");
     }
 
     private void returntoGameMenuView() {

@@ -5,8 +5,14 @@
  */
 package oregoncontrol.View;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oregoncontrol.View.InterfaceView;
+import oregontrail1.OregonTrail1;
 
 /**
  *
@@ -14,7 +20,10 @@ import oregoncontrol.View.InterfaceView;
  */
 public abstract class View implements InterfaceView {
     
-    protected String displayMessage;
+    private String displayMessage;
+    
+    protected final BufferedReader keyboard = OregonTrail1.getInFile();
+    protected final PrintWriter console = OregonTrail1.getOutFile();
     
     public View() {   
     }
@@ -41,18 +50,22 @@ public abstract class View implements InterfaceView {
         @Override
         public String getInput() {
         
-        Scanner keyboard = new Scanner(System.in);
 	String value = null;
 	boolean valid = false; 
         
 	while (!valid) {
-            System.out.println("\n" + this.displayMessage);
+            this.console.println("\n" + this.displayMessage);
 		
-            value = keyboard.nextLine();
+            try {
+                value = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim();
 		
             if (value.length() < 1) {
-		System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
 		continue;
 		}
 		

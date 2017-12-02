@@ -20,16 +20,16 @@ public class EventView {
     private boolean doAction(String weatherChoice) {
 
         if (weatherChoice.length() < 2) {
-            System.out.println("\nInvalid option choose again: "
-                    + "your choice must be either take S for take shelter"
-                    + " or M for move forward");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
             return false;
         }
 
         WeatherEvent weather = GameControl.createWeatherChoice(weatherChoice);
 
         if (weather == null) {
-            System.out.println("\nError weather event choice.");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
             return false;
         }
 
@@ -40,7 +40,7 @@ public class EventView {
 
     private void displayNextView(WeatherEvent weatherChoice) {
 
-        System.out.println("\n======================================="
+        this.console.println("\n======================================="
                 + "\n Your weather event choice is " + weatherChoice.getName()
                 + "\n The results of your choice are being calculated"
                 + "\n please stand by"
@@ -56,18 +56,18 @@ public class EventView {
 
     private String getMenuOption() {
 
-        Scanner keyboard = new Scanner(System.in);
         String value = "S";
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.promptCommand);
+            this.console.println("\n" + this.promptCommand);
 
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 continue;
             }
 

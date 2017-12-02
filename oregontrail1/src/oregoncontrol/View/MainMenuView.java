@@ -58,7 +58,8 @@ public class MainMenuView extends View {
                 this.saveGame(); // Save Game
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
         return false;
@@ -85,10 +86,19 @@ public class MainMenuView extends View {
 
     // existing game
     private void startExistingGame() {
-        System.out.println("\n*** start existing game ***");
-
+        this.console.println("\n Enter the file path for file where the game"
+                           + "\n is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrowView.display("MainMenuView", ex.getMessage());
+        }
+        
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
+        
     }
 
     // calls the help menu
@@ -107,7 +117,15 @@ public class MainMenuView extends View {
 
     // stub function
     private void saveGame() {
-        System.out.println("\n*** save game ***");
+        this.console.println("\n Enter the file path for file where the game"
+                           + "\n is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.saveGame(OregonTrail1.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrowView.display("MainMenuView", ex.getMessage());
+        }
 
     }
 }

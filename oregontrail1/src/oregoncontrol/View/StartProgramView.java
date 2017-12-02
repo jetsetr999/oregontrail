@@ -72,14 +72,13 @@ public class StartProgramView {
 
     private String getPlayersName() {
         
-        Scanner keyboard = new Scanner(System.in);
 	String value = "Fred Flintstone";
 	boolean valid = false;
 	
 	while (!valid) {
             System.out.println("\n" + this.promptMessage);
 		
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
 		
             if (value.length() < 1) {

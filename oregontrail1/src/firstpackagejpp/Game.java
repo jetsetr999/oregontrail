@@ -18,15 +18,15 @@ public class Game {
     private Player player;
 
     public void setCompanion1(String string) {
-        System.out.println("\n*** set companion1 ***");
+        this.console.println("\n*** set companion1 ***");
     }
 
     public void setInventory(InventoryItem[] items) {
-        System.out.println("\n*** set inventory ***");
+        this.console.println("\n*** set inventory ***");
     }
 
     public void setMap(Map map) {
-        System.out.println("\n*** set map ***");
+        this.console.println("\n*** set map ***");
     }
 
     public Player getPlayer() {

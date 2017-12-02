@@ -42,12 +42,12 @@ public enum Actor implements Serializable {
     }
 
     public String getHero() {
-        System.out.println("\n getHero stub");
+        this.console.println("\n getHero stub");
         return null;
     }
 
     public String getQantityOnHand() {
-        System.out.println("\n quantity on hand stub");
+        this.console.println("\n quantity on hand stub");
         return null;
     }
 

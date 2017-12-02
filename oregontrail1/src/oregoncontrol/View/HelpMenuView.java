@@ -54,29 +54,30 @@ public class HelpMenuView extends View {
                 this.returnToMainMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
         return false;
     }
 
     private void displayGameStrategy() {
-        System.out.println("\n*** displayGameStrategy stub function called ***");
+        this.console.println("\n*** displayGameStrategy stub function called ***");
 
     }
 
     private void displayMovement() {
-        System.out.println("\n*** displayMovement stub function called ***");
+        this.console.println("\n*** displayMovement stub function called ***");
 
     }
 
     private void displayAssists() {
-        System.out.println("\n*** displayAssists stub function called ***");
+        this.console.println("\n*** displayAssists stub function called ***");
 
     }
 
     private void displayDefinitions() {
-        System.out.println("\n*** displayDefinitions stub function called ***");
+        this.console.println("\n*** displayDefinitions stub function called ***");
 
     }
 
@@ -86,13 +87,13 @@ public class HelpMenuView extends View {
     }
 
     void displayHelpMenuView() {
-        System.out.println(" help menu view stub");
+        this.console.println(" help menu view stub");
     }
 
     private void ActorControlTest() {
         ActorControlTest actorControlTest = new ActorControlTest();
         actorControlTest.display();
-        System.out.println(" ActorControlTest Stub 111");
+        this.console.println(" ActorControlTest Stub 111");
 
     }
 
@@ -104,7 +105,7 @@ public class HelpMenuView extends View {
         }
 
         private static ActorControlTest ActorControlTest() {
-            System.out.println(" ActorControlTest Stub 2");
+            this.console.println(" ActorControlTest Stub 2");
             return null;
         }
 

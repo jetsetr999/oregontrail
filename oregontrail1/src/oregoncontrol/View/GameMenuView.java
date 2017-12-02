@@ -69,7 +69,8 @@ public class GameMenuView extends View {
                 this.returnToMainMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
             return false;
@@ -83,7 +84,7 @@ public class GameMenuView extends View {
     }
 
     private void viewTeamSupplies() {
-        System.out.println("\n*** Team Status Called");
+        this.console.println("\n*** Team Status Called");
     }
 
     private void setTeamPace() {
@@ -93,7 +94,7 @@ public class GameMenuView extends View {
     }
 
     private void sceneMenu() {
-        System.out.println("\n*** Scene Menu Called");
+        this.console.println("\n*** Scene Menu Called");
     }
 
     private void viewMap() {
@@ -113,7 +114,7 @@ public class GameMenuView extends View {
     }
 
     void displayGameMenuView() {
-       System.out.println("\n game menu view stub");
+       this.console.println("\n game menu view stub");
     }
 
     private void playerMenu() {

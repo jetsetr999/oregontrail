@@ -46,6 +46,35 @@ public class GameControl implements Serializable {
         return null;
 
     }
+    
+    public static void saveGame(Game game, String filepath)
+            throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        } catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+    }
+    
+    public static void getSavedGame(String filepath)
+            throws GameControlException {
+        
+        Game game = null; 
+        
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectIntputStream output = new ObjectIntputStream(fips);
+            
+            game = (Game) input.readObject();
+            
+        } catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        OregonTrail1.setCurrentGame(game);
+    }
 
     public static WeatherEvent createWeatherChoice(String weatherChoice) {
         System.out.println("weather stub");

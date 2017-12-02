@@ -51,29 +51,30 @@ public class MapMenuView extends View {
                 this.returnToMainMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
         return false;
     }
 
     private void displayMapView() {
-        System.out.println("\n*** displayMapView stub function called ***");
+        this.console.println("\n*** displayMapView stub function called ***");
 
     }
 
     private void displayDistanceNext() {
-        System.out.println("\n*** displayDistanceNext stub function called ***");
+        this.console.println("\n*** displayDistanceNext stub function called ***");
 
     }
 
     private void displayDistanceFinal() {
-        System.out.println("\n*** displayDistanceFinal stub function called ***");
+        this.console.println("\n*** displayDistanceFinal stub function called ***");
 
     }
 
     private void displayDistanceTraveled() {
-        System.out.println("\n*** displayDistanceTraveled stub function called "
+        this.console.println("\n*** displayDistanceTraveled stub function called "
                 + "***");
     }
 

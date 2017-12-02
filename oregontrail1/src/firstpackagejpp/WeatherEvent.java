@@ -16,7 +16,7 @@ public class WeatherEvent extends Event implements Serializable
     private int extraDelay;
 
     public WeatherEvent() {
-        System.out.println("this is stub for weather event");
+        this.console.println("this is stub for weather event");
     }
 
     public int getExtraDelay() {

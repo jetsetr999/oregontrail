@@ -12,7 +12,7 @@ package oregoncontrol.View;
 class FullMapView {
 
     void displayFullMapMenu() {
-        System.out.println("\n*** displayFullMapView stub function called ***");
+        this.console.println("\n*** displayFullMapView stub function called ***");
     }
     
 }

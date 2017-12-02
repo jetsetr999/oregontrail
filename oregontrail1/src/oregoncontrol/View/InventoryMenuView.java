@@ -53,18 +53,18 @@ public class InventoryMenuView
     // 
     private String getMenuOption() {
 
-        Scanner keyboard = new Scanner(System.in);
         String value = "N";
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.promptCommand);
+            this.console.println("\n" + this.promptCommand);
 
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 continue;
             }
 
@@ -92,7 +92,8 @@ public class InventoryMenuView
                 this.trade(); // Help Menu
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                                "\nInvalid value: value can not be blank");
                 break;
         }
         return false;
@@ -100,21 +101,21 @@ public class InventoryMenuView
 
     private void listItems() 
     {
-         System.out.println("\n*** listItems stub function called ***");
+         this.console.println("\n*** listItems stub function called ***");
     }
 
     private void foodAmount() 
     {
-        System.out.println("\n*** foodAmount stub function called ***");
+        this.console.println("\n*** foodAmount stub function called ***");
     }
 
     private void merchantStore() 
     {
-        System.out.println("\n*** merchantStore stub function called ***");
+        this.console.println("\n*** merchantStore stub function called ***");
     }
 
     private void trade() 
     {
-        System.out.println("\n*** trade stub function called ***");
+        this.console.println("\n*** trade stub function called ***");
     }
 }

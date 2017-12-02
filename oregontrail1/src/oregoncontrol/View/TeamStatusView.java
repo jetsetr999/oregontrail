@@ -48,14 +48,13 @@ public class TeamStatusView
     // 
     private String getMenuOption() {
 
-        Scanner keyboard = new Scanner(System.in);
         String value = "N";
         boolean valid = false;
 
         while (!valid) {
             System.out.println("\n" + this.promptCommand);
 
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
 
             if (value.length() < 1) {
@@ -111,5 +110,11 @@ public class TeamStatusView
     private void joy() 
     {
         System.out.println("\n*** joy stub function called ***");
+    }
+
+    private class keyboard {
+
+        public keyboard() {
+        }
     }
 }
