@@ -5,6 +5,7 @@
  */
 package oregontrail.control;
 
+import oregontrail.exceptions.InventoryControlException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,7 +23,7 @@ public class InventoryControlTest {
      * Test 1
      */
     @Test
-    public void test1GetSubTotal() {
+    public void test1GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 1");
         double pricePerUnit = 2;
@@ -38,7 +39,7 @@ public class InventoryControlTest {
      * Test 2
      */
     @Test
-    public void test2GetSubTotal() {
+    public void test2GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 2");
         double pricePerUnit = -5;
@@ -55,7 +56,7 @@ public class InventoryControlTest {
      * Test 3
      */
     @Test
-    public void test3GetSubTotal() {
+    public void test3GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 3");
         double pricePerUnit = 3;
@@ -72,7 +73,7 @@ public class InventoryControlTest {
      * Test 4
      */
     @Test
-    public void test4GetSubTotal() {
+    public void test4GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 4");
         double pricePerUnit = 3;
@@ -89,7 +90,7 @@ public class InventoryControlTest {
      * Test 5
      */
     @Test
-    public void test5GetSubTotal() {
+    public void test5GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 5");
         double pricePerUnit = 1;
@@ -106,7 +107,7 @@ public class InventoryControlTest {
      * Test 6
      */
     @Test
-    public void test6GetSubTotal() {
+    public void test6GetSubTotal() throws InventoryControlException {
         System.out.println("getSubTotal");
         System.out.println("Test Case 6");
         double pricePerUnit = 300;

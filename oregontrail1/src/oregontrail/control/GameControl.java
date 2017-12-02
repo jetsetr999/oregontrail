@@ -77,12 +77,12 @@ public class GameControl implements Serializable {
     }
 
     public static WeatherEvent createWeatherChoice(String weatherChoice) {
-        System.out.println("weather stub");
+        this.console.println("weather stub");
         return null;
     }
 
     private static Game Game() {
-        System.out.println(" game stub ");
+        this.console.println(" game stub ");
         return null;
     }
 
@@ -90,7 +90,13 @@ public class GameControl implements Serializable {
     public static Actor createActor(Actor hero) {
         return hero;
     }
-
+    
+    // Item array created
+    public static InventoryItem[] createItems(){
+        this.console.println(" Item Array stub in Game Control");
+        return null;
+        
+    }
     public ArrayList<Actor> addActor() {
 
         // create ArrayList for Actors
@@ -105,13 +111,12 @@ public class GameControl implements Serializable {
         for(int i=0; i< actorHero.size(); i++){
         
             Actor hero = actorHero.get(i);
-            System.out.println("\n\t Actor: " + hero.getHero() +
+            this.console.println("\n\t Actor: " + hero.getHero() +
                                "\n\t Quantity: "+ hero.getQantityOnHand());
         }
         
     }
-    // Assign an actor to the player
-    
+      
 }
 /*
 

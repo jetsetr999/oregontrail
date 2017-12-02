@@ -7,8 +7,7 @@ package oregontrail.control;
 
 import firstpackagejpp.Map;
 import javafx.scene.Scene;
-import firstpackagejpp.Enums.SceneType; 
-
+import firstpackagejpp.Enums.SceneType;
 
 /**
  *
@@ -25,18 +24,19 @@ public class MapControl {
         System.out.println("\n*** Create map stub function called ***");
     }
 }*/
-    public static Map createMap(int noOfRows, int noOfColumns){
-       Map map = null;
-      return map; 
+    public static Map createMap(int noOfRows, int noOfColumns) {
+        Map map = null;
+        return map;
     }
 
     public static void createMap(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(" createMap stub MapControl ");
     }
-    
+
     public static Scene[] createScenes(Scene[] Scene) {
-        return Scene;    
+        return Scene;
     }
+
 }
 
 // Scene[] scene = new Scene[];

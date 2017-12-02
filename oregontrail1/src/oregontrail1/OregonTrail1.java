@@ -103,7 +103,7 @@ public class OregonTrail1 {
     }
 
     public static Game getGame() {
-        System.out.println(" get game stub ");
+        System.out.println(" create game stub OregonTrail1 ");
         return null;
     }
 

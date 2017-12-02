@@ -6,7 +6,7 @@
 package oregoncontrol.View;
 
 import java.util.Scanner;
- Test_Packages
+ //Test_Packages
 
 /**
  *
@@ -47,9 +47,6 @@ public class HelpMenuView extends View {
             case "D":
                 this.displayDefinitions();
                 break;
-            case "T":
-                this.ActorControlTest(); // Actor sort test
-                break;    
             case "R":
                 this.returnToMainMenu();
                 break;
@@ -90,7 +87,7 @@ public class HelpMenuView extends View {
         this.console.println(" help menu view stub");
     }
 
-    private void ActorControlTest() {
+    /*private void ActorControlTest() {
         ActorControlTest actorControlTest = new ActorControlTest();
         actorControlTest.display();
         this.console.println(" ActorControlTest Stub 111");
@@ -109,5 +106,5 @@ public class HelpMenuView extends View {
             return null;
         }
 
-    }
+    }*/
 }

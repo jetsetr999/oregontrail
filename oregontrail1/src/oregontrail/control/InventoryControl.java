@@ -39,5 +39,8 @@ public class InventoryControl
         return null;
          
     }
-     
+      public static String createItem() {
+         System.out.println("\n create Item stub");
+        return null;
+      }
 }
